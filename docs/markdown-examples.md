@@ -1,12 +1,12 @@
-# Markdown Extension Examples
+# Markdown扩展示例
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+本页面演示了VitePress提供的一些内置的Markdown扩展功能。
 
-## Syntax Highlighting
+## 语法高亮
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+VitePress使用[Shiki](https://github.com/shikijs/shiki)提供语法高亮功能，还支持行高亮等其他功能：
 
-**Input**
+**输入**
 
 ````md
 ```js{4}
@@ -20,7 +20,7 @@ export default {
 ```
 ````
 
-**Output**
+**输出**
 
 ```js{4}
 export default {
@@ -32,54 +32,54 @@ export default {
 }
 ```
 
-## Custom Containers
+## 自定义容器
 
-**Input**
+**输入**
 
 ```md
 ::: info
-This is an info box.
+这是一个信息框。
 :::
 
 ::: tip
-This is a tip.
+这是一个提示。
 :::
 
 ::: warning
-This is a warning.
+这是一个警告。
 :::
 
 ::: danger
-This is a dangerous warning.
+这是一个危险警告。
 :::
 
 ::: details
-This is a details block.
+这是一个详细信息块。
 :::
 ```
 
-**Output**
+**输出**
 
 ::: info
-This is an info box.
+这是一个信息框。
 :::
 
 ::: tip
-This is a tip.
+这是一个提示。
 :::
 
 ::: warning
-This is a warning.
+这是一个警告。
 :::
 
 ::: danger
-This is a dangerous warning.
+这是一个危险警告。
 :::
 
 ::: details
-This is a details block.
+这是一个详细信息块。
 :::
 
-## More
+## 更多
 
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+请查阅[完整的Markdown扩展列表](https://vitepress.dev/guide/markdown)的文档。
