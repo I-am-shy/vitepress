@@ -1,5 +1,43 @@
 # js爬虫
 
+## js爬虫的原理
+
+js爬虫的原理 
+- 通过模拟浏览器（需要配置相应的请求头）发送请求，请求完整html文件，
+- 然后通过html文件的内容，解析出需要的数据。
+
+:::tip
+可以通过`node-fetch`或`axios`库发送请求，`cheerio`库解析网页内容。
+:::
+
+### cheerio的原理
+
+[cheerio](https://cheerio.nodejs.cn/) 是一个用于在服务器端解析 HTML 的库，它提供了类似 jQuery 的语法，可以方便地操作 DOM 元素。
+
+cheerio 会将获取的网页数据（字符串-html文件）解析成类似浏览器dom对象的数据，然后通过类似jQuery的方式操作dom对象，从而获取到需要的数据。
+
+## 相比python爬虫的优势
+
+对于前端开发者来说，js解析网页内容具有先天优势（dom的操作，获取标签内部的数据），理论上在浏览器中可以看到的内容都可以使用js轻松获取到，并提取出来。
+
+而python爬虫需要通过正则表达式匹配标签，提取标签内部的数据，相对来说比较麻烦。
+
+## 一个简单的爬虫
+
+通过以下示例，可以实现一个简单的爬虫，爬取网站上的图片链接，并保存到本地json文件中。
+
+**目录结构：**
+``` 
+first-clawler
+├── node_modules
+├── file.js
+├── img.json
+├── index.js
+├── package.json
+├── package-lock.json
+└── preview.html
+```
+
 **代码示例**
 
 index.js
@@ -150,15 +188,3 @@ package.json
 }
 ```
 
-
-目录结构：
-``` 
-first-clawler
-├── node_modules
-├── file.js
-├── img.json
-├── index.js
-├── package.json
-├── package-lock.json
-└── preview.html
-```

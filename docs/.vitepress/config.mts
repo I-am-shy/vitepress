@@ -7,8 +7,8 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '主页', link: '/' },
+      { text: 'md语法', link: '/markdown-examples' }
     ],
 
     sidebar: [
@@ -22,7 +22,7 @@ export default defineConfig({
       {
         text: "js爬虫",
         items:[
-          { text: "js爬虫", link: "/jsClawler" }
+          { text: "js爬虫", link: "/js-clawler/jsClawler" }
         ]
       }
     ],
