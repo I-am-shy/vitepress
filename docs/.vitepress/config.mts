@@ -2,8 +2,12 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'zh-CN',
   title: "shy的学习笔记",
   description: "一个文档网站",
+  head:[
+    ['link',{ rel: 'icon', href: '/public/favicon.ico' }]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
