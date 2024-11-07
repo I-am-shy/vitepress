@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "我的超棒项目"
-  text: "一个 VitePress 网站"
-  tagline: 我伟大的项目标语
+  name: "shy的学习笔记"
+  text: "一个文档网站"
+  tagline: 关于我的前端开发，以及前端可以做什么
   actions:
     - theme: brand
       text: Markdown 示例
@@ -14,11 +14,17 @@ hero:
       text: API 示例
       link: /api-examples
 
+
+
 features:
-  - title: 特性 A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: 特性 B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: 特性 C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 网页开发
+    details: 通过html，css，js已经一些框架技术构建网页内容。
+  - title: 服务端开发
+    details: js运行时（javascript runtime）node.js、deno.js，可以用来构建服务端应用。
+  - title: 移动端开发
+    details: 通过react native，flutter，uni-app等框架构建移动端应用。
+  - title: 桌面应用开发
+    details: 通过electron，taro等框架构建桌面端应用。
+  - title: 扩展开发
+    details: 使用javascript，typescript，rust等语言构建浏览器插件，idle（vscode）插件等。
 ---
