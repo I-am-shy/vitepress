@@ -13,10 +13,13 @@ export default defineConfig({
     nav: [
       { text: '主页', link: '/' },
       { text: 'md语法', link: '/markdown-examples' },
-      { text: "JS",items:[
-        {text:"js爬虫",link:"/js-clawler/jsClawler"},
-        {text:"js实现拍摄和录屏",link:"/js-video/jsVideo"}
-      ]}
+      { text: "JS",
+        items:[
+          {text:"js爬虫",link:"/js-clawler/jsClawler"},
+          {text:"js实现拍摄和录屏",link:"/js-video/jsVideo"},
+          {text:"js流",link:"/js-MediaStream/jsMediaStream"}
+        ]
+      }
     ],
 
     sidebar: [
@@ -39,6 +42,13 @@ export default defineConfig({
         text: "浏览器API",
         items: [
           { text: "js实现拍摄和录屏功能", link: "/js-video/jsVideo"}
+        ],
+        collapsed: false
+      },
+      {
+        text: "js流",
+        items:[
+          { text: "js流", link: "/js-MediaStream/jsMediaStream.md"}
         ],
         collapsed: false
       }
