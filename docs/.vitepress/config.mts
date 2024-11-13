@@ -15,9 +15,10 @@ export default defineConfig({
       { text: 'md语法', link: '/markdown-examples' },
       { text: "JS",
         items:[
-          {text:"js爬虫",link:"/js-clawler/jsClawler"},
-          {text:"js实现拍摄和录屏",link:"/js-video/jsVideo"},
-          {text:"js流",link:"/js-MediaStream/jsMediaStream"}
+          {text:"js爬虫",link:"/JS/Clawler"},
+          {text:"js实现拍摄和录屏",link:"/JS/Video"},
+          {text:"js流",link:"/JS/Stream"},
+          {text:"ThreeJS 3D模型",link:"/JS/ThreeJS"},
         ]
       }
     ],
@@ -34,21 +35,30 @@ export default defineConfig({
       {
         text: "js爬虫",
         items:[
-          { text: "js爬虫", link: "/js-clawler/jsClawler" }
+          { text: "js爬虫", link: "/JS/Clawler" }
         ],
         collapsed: false
       },
       {
         text: "浏览器API",
         items: [
-          { text: "js实现拍摄和录屏功能", link: "/js-video/jsVideo"}
+          { text: "js实现拍摄和录屏功能", link: "/JS/Video"}
         ],
         collapsed: false
       },
       {
         text: "js流",
         items:[
-          { text: "js流", link: "/js-MediaStream/jsMediaStream.md"}
+          { text: "js流", link: "/JS/Stream.md"}
+        ],
+        collapsed: false
+      },
+      {
+        text: "ThreeJS 3D模型",
+        items:[
+          { text: "基本概念", link: "/JS/ThreeJS"},
+          { text: "第一个3D场景模型", link:"/JS/ThreeJS/scene"},
+          { text: "几何矩阵" , link:"/JS/ThreeJS/geometry"},
         ],
         collapsed: false
       }
