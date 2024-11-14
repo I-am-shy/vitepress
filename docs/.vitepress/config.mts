@@ -58,6 +58,7 @@ export default defineConfig({
         text: "ThreeJS 3D模型",
         items:[
           { text: "基本概念", link: "/JS/ThreeJS"},
+          { text: "初始化场景模型", link: "/JS/ThreeJS/init"},
           { text: "第一个3D场景模型", link:"/JS/ThreeJS/scene"},
           { text: "几何矩阵" , link:"/JS/ThreeJS/geometry"},
         ],

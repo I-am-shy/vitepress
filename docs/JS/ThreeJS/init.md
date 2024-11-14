@@ -69,6 +69,7 @@ console.log(scene, camera, light);
 ```
 
 ::: details index.html
+``` html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,5 +91,5 @@ console.log(scene, camera, light);
   <script type="module" src="./index.js"></script>
 </body>
 </html>
-
+```
 :::
