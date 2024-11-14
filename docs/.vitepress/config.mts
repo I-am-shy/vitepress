@@ -7,7 +7,7 @@ export default defineConfig({
   title: "shy的学习笔记",
   description: "一个文档网站",
   head:[
-    ['link',{ rel: 'icon', href: '/public/favicon.ico' }]
+    ['link',{ rel: 'icon', href: '/vitepress/public/favicon.ico' }]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
