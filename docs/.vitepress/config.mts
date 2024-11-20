@@ -50,7 +50,14 @@ export default defineConfig({
       {
         text: "js流",
         items:[
-          { text: "js流", link: "/JS/Stream.md"}
+          { text: "js流", link: "/JS/Stream"}
+        ],
+        collapsed: false
+      },
+      {
+        text: "js动画库",
+        items: [
+          {text: "popmotion", link: "/JS/Animation"}
         ],
         collapsed: false
       },

@@ -100,7 +100,7 @@ import fs from 'fs'
  * @param {Array} newData 新增的数据
  * @returns {boolean} 文件写入成功返回true，失败返回false
  * 
- * 先读取愿内容，然后添加新的内容，最后再写回文件
+ * 先读取原内容，然后添加新的内容，最后再写回文件
  */
 export default function file(path,newData){
   let oldData = [],resultData = []
