@@ -74,7 +74,16 @@ export default defineConfig({
 
     search: {
       provider: 'local'
-    }
+    },
+
+    lastUpdated:{
+      text: '最后更新时间',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'short'
+      }
+    },
+
 
   }
 })
