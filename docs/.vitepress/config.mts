@@ -6,6 +6,7 @@ export default defineConfig({
   base: '/vitepress/',
   title: "shy的学习笔记",
   description: "一个文档网站",
+  lastUpdated: true,
   head:[
     ['link',{ rel: 'icon', href: '/vitepress/favicon.ico' }]
   ],
