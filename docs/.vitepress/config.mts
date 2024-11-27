@@ -14,14 +14,6 @@ export default defineConfig({
     nav: [
       { text: '主页', link: '/' },
       { text: 'md语法', link: '/markdown-examples' },
-      { text: "JS",
-        items:[
-          {text:"js爬虫",link:"/JS/Clawler"},
-          {text:"js实现拍摄和录屏",link:"/JS/Video"},
-          {text:"js流",link:"/JS/Stream"},
-          {text:"ThreeJS 3D模型",link:"/JS/ThreeJS"},
-        ]
-      }
     ],
 
     sidebar: [
@@ -34,40 +26,42 @@ export default defineConfig({
         collapsed: false
       },
       {
-        text: "js爬虫",
+        text: "JS语法",
         items:[
-          { text: "js爬虫", link: "/JS/Clawler" }
+          {
+            text: "浏览器API",
+            items: [
+              { text: "js实现拍摄和录屏功能", link: "/JS/Video"}
+            ],
+            collapsed: true
+          }, 
+          {
+            text: "js动画库",
+            items: [
+              {text: "popmotion", link: "/JS/Animation"}
+            ],
+            collapsed: true
+          },
+          {
+            text: "ThreeJS 3D模型",
+            items:[
+              { text: "基本概念", link: "/JS/ThreeJS"},
+              { text: "初始化场景模型", link: "/JS/ThreeJS/init"},
+              { text: "第一个3D场景模型", link:"/JS/ThreeJS/scene"},
+              { text: "几何矩阵" , link:"/JS/ThreeJS/geometry"},
+            ],
+            collapsed: true
+          },
+          { text: "js爬虫", link: "/JS/Clawler" },
+          { text: "js流", link: "/JS/Stream"},
+          { text: "node-server",link: "/JS/node-server"},
         ],
         collapsed: false
       },
       {
-        text: "浏览器API",
-        items: [
-          { text: "js实现拍摄和录屏功能", link: "/JS/Video"}
-        ],
-        collapsed: false
-      },
-      {
-        text: "js流",
+        text: "TS语法",
         items:[
-          { text: "js流", link: "/JS/Stream"}
-        ],
-        collapsed: false
-      },
-      {
-        text: "js动画库",
-        items: [
-          {text: "popmotion", link: "/JS/Animation"}
-        ],
-        collapsed: false
-      },
-      {
-        text: "ThreeJS 3D模型",
-        items:[
-          { text: "基本概念", link: "/JS/ThreeJS"},
-          { text: "初始化场景模型", link: "/JS/ThreeJS/init"},
-          { text: "第一个3D场景模型", link:"/JS/ThreeJS/scene"},
-          { text: "几何矩阵" , link:"/JS/ThreeJS/geometry"},
+          {text: "在任意位置运行ts", link: "/TS/run-TS"}
         ],
         collapsed: false
       }
