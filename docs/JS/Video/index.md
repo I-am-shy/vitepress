@@ -23,9 +23,32 @@ var promise = navigator.mediaDevices.getDisplayMedia(constraints);
 ```
 - 参数 constraints 可选
 一个可选的MediaStreamConstraints对象，它指定了返回的MediaStream的要求。因为getDisplayMedia()需要视频轨道，所以即使constraints 对象没有明确请求视频轨道，返回的流也会有一个
+  1. video: 提供一个布尔值或者对象
+    - 布尔值 : true 表示需要视频轨道 
+    - 对象:
+      1. width: 1024 表示视频宽度
+      2. height: 768 表示视频高度
+      3. frameRate: 30 表示视频帧率
+      4. facingMode: 'user' 表示前置摄像头(默认)，'environment' 表示后置摄像头
+  2. audio: true 表示需要音频轨道
 
 - 返回值 一个被解析为 MediaStream 的 Promise，
 其中包含一个待解析的媒体流
+
+:::warning 注意
+可以通过修改constrains.video.facingMode来切换前后摄像头,但是切换时需要先停止视屏流，然后重新获取视频流
+
+在PC端，constrains.video.facingMode即时设置为‘environment’，也只能获取前置摄像头
+:::
+
+### 停止媒体流
+
+```js
+// 停止媒体流，stream为媒体流
+stream.getTracks().forEach((track) => {
+  track.stop() // 停止媒体流
+})
+```
 
 **示例：**
 ```js
@@ -97,9 +120,20 @@ var promise = navigator.mediaDevices.getDisplayMedia(constraints);
 
 - 参数 constraints 可选
 一个可选的MediaStreamConstraints对象，它指定了返回的MediaStream的要求。因为getDisplayMedia()需要视频轨道，所以即使constraints 对象没有明确请求视频轨道，返回的流也会有一个
+  1. video: 提供一个布尔值或者对象
+    - 布尔值 : true 表示需要视频轨道 
+    - 对象:
+      1. width: 1024 表示视频宽度
+      2. height: 768 表示视频高度
+      3. frameRate: 30 表示视频帧率
+  2. audio: true 表示需要音频轨道
 
 - 返回值 一个被解析为 MediaStream 的 Promise，
 其中包含一个待解析的媒体流
+
+:::warning 注意
+video.width 和 video.height 是视频的原始宽高，而不是裁剪后的宽高；这可能会影响视频的清晰度，默认使用true即可
+:::
 
 **示例：**
 ```js

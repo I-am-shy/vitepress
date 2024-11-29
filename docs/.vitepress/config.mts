@@ -65,6 +65,13 @@ export default defineConfig({
           {text: "在任意位置运行ts", link: "/TS/run-TS"}
         ],
         collapsed: false
+      },
+      {
+        text: "其他",
+        items:[
+          {text: "YAML", link: "/other/yaml"}
+        ],
+        collapsed: false
       }
     ],
 
