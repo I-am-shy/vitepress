@@ -1,5 +1,5 @@
-# 使用node-server搭建https服务
-## 安装node-server
+# 使用http-server搭建https服务
+## 安装http-server
 ```bash
 npm install -g http-server
 ```
@@ -17,7 +17,7 @@ openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 └── key.pem
 ```
 
-## 启动node命令
+## 启动http-server命令
 ```bash
 http-server -S -p 8080
 ```

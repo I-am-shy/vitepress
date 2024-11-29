@@ -55,7 +55,7 @@ export default defineConfig({
           },
           { text: "js爬虫", link: "/JS/Clawler" },
           { text: "js流", link: "/JS/Stream"},
-          { text: "node-server",link: "/JS/node-server"},
+          { text: "http-server",link: "/JS/http-server"},
         ],
         collapsed: false
       },
