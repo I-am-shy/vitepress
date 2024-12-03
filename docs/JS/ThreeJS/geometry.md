@@ -1,7 +1,13 @@
 # 模型实例--- 几何矩阵
 
-代码如下：
 
+**效果展示**
+
+![效果展示](./example.gif)
+
+**代码如下：**
+
+:::details 示例代码
 ```js
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -158,3 +164,4 @@ gui.add(light,'intensity',{
 gui.add(controls,'enableDamping',true).name('阻尼效果');
 
 ```
+:::
