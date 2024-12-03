@@ -27,7 +27,7 @@ export default defineConfig({
         collapsed: false
       },
       {
-        text: "JS语法",
+        text: "JS",
         items:[
           {
             text: "浏览器API",
@@ -57,11 +57,12 @@ export default defineConfig({
           { text: "js流", link: "/JS/Stream"},
           { text: "http-server",link: "/JS/http-server"},
           { text: "html转markdown", link: "/JS/Turndown"},
+          { text: "2d物理引擎", link: "/JS/Matter"},
         ],
         collapsed: false
       },
       {
-        text: "TS语法",
+        text: "TS",
         items:[
           {text: "在任意位置运行ts", link: "/TS/run-TS"}
         ],
