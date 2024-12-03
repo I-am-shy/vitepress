@@ -2,6 +2,10 @@
 
 通过js将HTML转换为Markdown，使用[turndown](https://github.com/mixmark-io/turndown)库
 
+## 原理
+
+turndown库的原理是遍历匹配所有的HTML标签，然后根据默认或者设置好的规则将其转换为Markdown格式。
+
 ## 安装turndown
 npm
 ```bash
@@ -64,9 +68,9 @@ var turndownService = new TurndownService({
 ### `addRule(key, rule)` 添加规则
 - key：唯一的规则名称,string类型
 - rule：规则对象，包含`filter`和`replacement`两个属性
-  - filter：过滤函数，返回true则执行replacement，false则跳过，用来过滤出需要特殊处理的部分
+  - filter：过滤函数，返回true则执行replacement，false则跳过，用来过滤出需要特殊处理的节点
     - node 遍历处理的节点
-  - replacement：替换函数，返回替换后的字符串，将过滤出来的部分进行转换
+  - replacement：替换函数，返回替换后的字符串，将过滤出来的节点进行转换
     - content：过滤出来节点的内容
     - node：过滤出来的节点
 
