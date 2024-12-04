@@ -34,7 +34,7 @@ npm install matter-js
 <script src="https://cdn.bootcdn.net/ajax/libs/matter-js/0.19.0/matter.js"></script>
 ```
 
-## 示例
+## 示例1
 
 **js代码**
 ```js
@@ -59,12 +59,6 @@ const render = Render.create({
 let boxA = Bodies.rectangle(400, 200, 80, 80)
 let boxB = Bodies.rectangle(450, 50, 80, 80,{
   restitution:0.5, // 弹性系数,默认为0
-  render:{
-    strokeStyle:"#fffeee",
-    sprite:{
-      texture:"https://lf-web-assets.juejin.cn/obj/juejin-web/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg"
-    }
-  }
 })
 
 // 创建地面，将isStatic设为true，表示物体静止(一个完全静止的物体)
@@ -122,3 +116,103 @@ Runner.run(runner, engine);
 **效果展示**
 
 ![效果展示](./example.gif)
+
+## 示例2
+
+**js代码**
+```js
+// 参考文章：https://juejin.cn/post/7221550123193811002
+
+const container = document.querySelector('.container'); // 获取容器
+
+
+// 刚体，复合体，引擎，运行器，渲染器
+const { Bodies, Composite, Composites, Engine, Runner, Render,Mouse,MouseConstraint } = Matter;
+
+// 创建引擎
+const engine = Engine.create();
+// 创建渲染器
+const render = Render.create({
+  element: container, // 展示容器
+  engine: engine, // 引擎
+  options:{
+    wireframes:false // 线框模式 ,使用填充色功能时，要关掉渲染器的线框模式。
+  }
+});
+
+
+//  创建两个正方形
+let boxA = Bodies.rectangle(400, 200, 80, 80)
+let boxB = Bodies.rectangle(450, 50, 80, 80,{
+  restitution:0.5, // 弹性系数,默认为0
+  render:{
+    // fillStyle:"#fffeee",
+    strokeStyle:"#fffeee",
+    lineWidth:10,
+    sprite:{// 精灵图
+      texture:"https://lf-web-assets.juejin.cn/obj/juejin-web/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg",
+      xScale:0.5,
+      yScale:1.5,
+      xOffset:0,
+      yOffset:0
+    }
+  }
+})
+
+// 堆,创建一堆物体
+// 起始位置 x,y 列数，行数，列间距，行间距，物体创建函数
+// 起始位置是 (20, 20)，一共3列3行，列间距10，行间距20
+let stack = Composites.stack(200, 20, 3, 3, 20, 20, function (x, y) {// x,y 是物体坐标，这一堆物体中每个物体的坐标
+  if(y >= 50 && y <=80 )return Bodies.rectangle(x, y, 50, 50,{restitution:0.5})
+  else return Bodies.circle(x, y, 15,{restitution:1})
+})
+
+// 创建地面，将isStatic设为true，表示物体静止(一个完全静止的物体)
+let ground = Bodies.rectangle( 400, 500,1000, 10, { isStatic: true ,mass:Infinity,render:{fillStyle:"#aaaeee"}})
+// 创建两边的墙壁
+let wallLeft = Bodies.rectangle(0, 300, 10, 400, { isStatic: true,render:{fillStyle:"#aaaeee"} })
+let wallRight = Bodies.rectangle(800, 300, 10, 400, { isStatic: true,render:{fillStyle:"#aaaeee"} })
+
+console.log(ground)
+
+// 创建鼠标实例
+let mouse = Mouse.create(render.canvas)
+
+// 创建鼠标约束
+let mouseConstraint = MouseConstraint.create(engine, {
+  mouse: mouse,
+  constraint:{
+    stiffness:0.5, //一个指定约束的刚度（Number，默认 1），即恢复到静止状态的速率constraint.length。 值为1意味着约束应该非常严格。 值为0.2意味着约束就像一个软弹簧。
+    render:{
+      visible:false // 不显示约束线(鼠标轨迹)默认可见
+    }
+  }
+})
+
+// 将所有物体添加到世界中 
+Composite.add(engine.world, [boxA, boxB, ground,wallLeft,wallRight,mouseConstraint,stack])
+
+// Composite.move --- 移动物体（相当于先移除后添加）; Composite.clear --- 清除物体
+
+
+setTimeout(() => {
+  Composite.add(engine.world,Bodies.rectangle(400, 200, 80, 80))
+}, 2000)// 2秒后添加一个物体
+
+setInterval(() => {
+  Composite.add(engine.world,Bodies.circle(Math.random()*800, 100, 15))
+}, 100)// 每100毫秒添加一个圆形物体
+
+// 执行渲染操作
+Render.run(render)
+
+// 创建运行器
+const runner = Runner.create();// 默认画布800*600
+
+// 将引擎和渲染器添加到运行器中
+Runner.run(runner, engine);
+
+```
+**效果展示**
+
+![效果展示](./example2.gif)
