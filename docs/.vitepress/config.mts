@@ -32,46 +32,46 @@ export default defineConfig({
           {
             text: "浏览器API",
             items: [
-              { text: "js实现拍摄和录屏功能", link: "/JS/Video"}
+              { text: "js实现拍摄和录屏功能", link: "/JS/Video/"}
             ],
             collapsed: true
           }, 
           {
             text: "js动画库",
             items: [
-              {text: "popmotion", link: "/JS/Animation"}
+              {text: "popmotion", link: "/JS/Animation/"}
             ],
             collapsed: true
           },
           {
             text: "ThreeJS 3D模型",
             items:[
-              { text: "基本概念", link: "/JS/ThreeJS"},
+              { text: "基本概念", link: "/JS/ThreeJS/"},
               { text: "初始化场景模型", link: "/JS/ThreeJS/init"},
               { text: "第一个3D场景模型", link:"/JS/ThreeJS/scene"},
               { text: "几何矩阵" , link:"/JS/ThreeJS/geometry"},
             ],
             collapsed: true
           },
-          { text: "js爬虫", link: "/JS/Clawler" },
-          { text: "js流", link: "/JS/Stream"},
-          { text: "http-server",link: "/JS/http-server"},
-          { text: "html转markdown", link: "/JS/Turndown"},
-          { text: "2d物理引擎", link: "/JS/Matter"},
+          { text: "js爬虫", link: "/JS/Clawler/" },
+          { text: "js流", link: "/JS/Stream/"},
+          { text: "http-server",link: "/JS/http-server/"},
+          { text: "html转markdown", link: "/JS/Turndown/"},
+          { text: "2d物理引擎", link: "/JS/Matter/"},
         ],
         collapsed: false
       },
       {
         text: "TS",
         items:[
-          {text: "在任意位置运行ts", link: "/TS/run-TS"}
+          {text: "在任意位置运行ts", link: "/TS/run-TS/"}
         ],
         collapsed: false
       },
       {
         text: "其他",
         items:[
-          {text: "YAML", link: "/other/yaml"}
+          {text: "YAML", link: "/other/yaml/"}
         ],
         collapsed: false
       }
