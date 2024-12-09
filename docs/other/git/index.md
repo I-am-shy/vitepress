@@ -7,7 +7,7 @@
 - 仓库区：存放了所有版本的数据
 - 远程仓库：即github、gitlab、gitee等代码托管平台
 
-![alt text](image####1.png)
+![alt text](image-1.png)
 ![alt text](image.png)
 
 :::details 关于pr[pull request]
