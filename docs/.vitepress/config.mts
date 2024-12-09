@@ -71,7 +71,8 @@ export default defineConfig({
       {
         text: "其他",
         items:[
-          {text: "YAML", link: "/other/yaml/"}
+          {text: "YAML", link: "/other/yaml/"},
+          {text: "git", link: "/other/git/"}
         ],
         collapsed: false
       }
@@ -93,6 +94,7 @@ export default defineConfig({
       }
     },
 
+    outline: [2, 4],
 
   }
 })
