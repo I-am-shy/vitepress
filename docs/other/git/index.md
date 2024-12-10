@@ -27,15 +27,15 @@ pr的流程：
 
 #### 查看git版本
 ```bash
-git ########version
+git --version
 ```
 
 #### 查看git配置和配置文件
 ```bash
 # 查看配置
-git config ########list
+git config --list
 # 查看配置文件
-git config ########global ########edit
+git config --global --edit
 ```
 
 #### 查看git仓库状态
@@ -49,9 +49,9 @@ git log
 
 #### 查看已经添加的远程仓库
 ```bash
-git remote ####v
+git remote -v
 ```
-#### git 查看分支
+#### 查看分支
 ```bash
 git branch
 ```
@@ -70,14 +70,14 @@ git add <file>
 
 #### 提交文件到git仓库
 ```bash
-git commit ####m "commit message"
+git commit -m "commit message"
 ```
 
 #### 拉取远程仓库
 ```bash
 git pull origin <branchName>
 # 拉取远程仓库并合并差异
-git pull origin <branchName> ########rebase
+git pull origin <branchName> --rebase
 ```
 
 #### 推送文件到远程仓库
@@ -96,9 +96,9 @@ git push origin <branchName>
 #### 删除分支
 ```bash
 # 删除本地分支
-git branch ####d <localBranchName>
+git branch -d <localBranchName>
 # 删除远程分支
-git push origin ########delete <remoteBranchName>
+git push origin --delete <remoteBranchName>
 
 ```
 
@@ -107,7 +107,7 @@ git push origin ########delete <remoteBranchName>
 # 切换分支
 git checkout <branchName>
 # 创建并切换分支
-git checkout ####b <branchName>
+git checkout -b <branchName>
 ```
 
 
@@ -118,26 +118,26 @@ git merge <branchName>
 
 #### 克隆远程仓库
 ```bash
-# url ############ [远程仓库地址]
+# url --- [远程仓库地址]
 git clone <url>
 ```
 
 #### 添加远程仓库
 ```bash
-# remoteName ############ 远程仓库名称 url ############ 远程仓库地址
+# remoteName --- 远程仓库名称 url --- 远程仓库地址
 git remote add <remoteName> <url>
 ```
 #### 撤销删除操作
 ```bash
-# file ############ 具体的文件路径（可通过git status查看），没有file参数时会取消所有提交
+# file --- 具体的文件路径（可通过git status查看），没有file参数时会取消所有提交
 git reset <file>
 # 回退到一次commit   
-# ########soft：回退并保留更改，########hard：回退不保留更改
-git reset [########soft][########hard] HEAD^
-# commit ############ commit id 
+# --soft：回退并保留更改，--hard：回退不保留更改
+git reset [--soft][--hard] HEAD^
+# commit --- commit id 
 git checkout <commit id>
 # 删除工作区的文件，并同步到暂存区
-# file ############ [文件路径]
+# file --- [文件路径]
 git rm <file>
 ```
 
@@ -145,6 +145,7 @@ git rm <file>
 
 删除本地git仓(库删除根目录下的.git文件夹，慎用)
 ```bash
-find . ####name ".git" | xargs rm ####Rf
+find . -name ".git" | xargs rm -rf
 ```
 :::
+
