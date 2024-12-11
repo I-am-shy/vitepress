@@ -21,8 +21,8 @@ export default defineConfig({
       {
         text: 'md语法',
         items: [
-          { text: 'Markdown 例子', link: '/markdown-examples' },
-          { text: '运行时 API 例子', link: '/api-examples' }
+          { text: 'Markdown语法参考', link: '/markdown-examples' },
+          { text: '页面配置参考', link: '/api-examples' }
         ],
         collapsed: false
       },
@@ -72,7 +72,8 @@ export default defineConfig({
         text: "其他",
         items:[
           {text: "YAML", link: "/other/yaml/"},
-          {text: "git", link: "/other/git/"}
+          {text: "常用的git命令", link: "/other/git/"},
+          {text: "常用的unix命令", link: "/other/unix/"}
         ],
         collapsed: false
       }
@@ -94,7 +95,14 @@ export default defineConfig({
       }
     },
 
-    outline: [2, 4],
+    outline:{
+      level: [2, 4],
+      label: "此页面"
+    },
 
+    docFooter:{
+      prev: '上一页',
+      next: '下一页'
+    }
   }
 })
