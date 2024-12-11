@@ -80,6 +80,13 @@ git pull origin <branchName>
 git pull origin <branchName> --rebase
 ```
 
+#### 拉取远程分支到本地
+```bash
+# origin --- 远程仓库名称,可是通过git remote -v查看
+# branchName --- 要拉取的远程分支名称
+git fetch origin <branchName>
+```
+
 #### 推送文件到远程仓库
 ```bash
 git push origin <branchName>
