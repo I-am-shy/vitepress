@@ -216,3 +216,114 @@ Runner.run(runner, engine);
 **效果展示**
 
 ![效果展示](./example2.gif)
+
+## 示例3
+
+**js代码**
+
+```js
+const container = document.querySelector('.container'); // 获取容器
+
+
+// 刚体，复合体，引擎，运行器，渲染器
+const { Bodies, Composite, Composites, Engine, Runner, Render,Mouse,MouseConstraint,Collision } = Matter;
+
+const engine = Engine.create();
+const runner = Runner.create();
+const render = Render.create({
+  element: container,
+  engine: engine,
+  options:{
+    wireframes:false // 线框模式 ,使用填充色功能时，要关掉渲染器的线框模式。
+  }
+});
+
+const ground = Bodies.rectangle(400, 500, 1000, 10, { isStatic: true });
+const wallLeft = Bodies.rectangle(0, 300, 10, 400, { isStatic: true });
+const wallRight = Bodies.rectangle(800, 300, 10, 400, { isStatic: true });
+
+const boxA = Bodies.rectangle(400, 200, 80, 80);
+const boxB = Bodies.rectangle(450, 50, 80, 80);
+
+// 创建鼠标约束
+let mouseConstraint = MouseConstraint.create(engine, {
+  // mouse: mouse,
+  constraint:{
+    stiffness:1, //一个指定约束的刚度（Number，默认 1），即恢复到静止状态的速率constraint.length。 值为1意味着约束应该非常严格。 值为0.2意味着约束就像一个软弹簧。
+    render:{
+      visible:false // 不显示约束线(鼠标轨迹)默认可见
+    }
+  }
+})
+
+Matter.Common.log(Collision.create(boxA,boxB))
+Matter.Common.log("碰撞检测：",Collision.collides(boxA,boxB))
+
+
+Matter.Events.on(engine,"collisionStart",function(event){
+  Matter.Common.log("碰撞开始：",event.pairs[0])
+  
+})
+
+const keyPress = {
+  "ArrowLeft":false,
+  "ArrowRight":false,
+  "ArrowUp":false
+}
+const v={// 速度
+  x:0,
+  y:0
+}
+window.addEventListener("keydown",function(event){// 按下任意按键根据条件持续激活事件
+  if(event.key in keyPress){
+    keyPress[event.key] = true
+  }
+  console.log(keyPress)
+  if(keyPress["ArrowUp"]){
+    v.y=-10// 按空格键，boxA向上移动
+  }
+  if(keyPress["ArrowLeft"]){
+    v.x=-5// 按左箭头键，boxA向左移动
+  }
+  if(keyPress["ArrowRight"]){
+    v.x=5// 按右箭头键，boxA向右移动
+  }
+  if(event.key === " "){
+    Matter.Body.setPosition(boxA,{x:400,y:200})// 改变位置
+  }
+  Matter.Body.setVelocity(boxA,v)
+})
+
+window.addEventListener("keyup",function(event){// 松开任意按键改变条件
+  if(event.key in keyPress){
+    keyPress[event.key] = false
+  }
+  if(!keyPress["ArrowUp"]){
+    v.y=0
+  }
+  if(!keyPress["ArrowLeft"]){
+    v.x=0
+  }
+  if(!keyPress["ArrowRight"]){
+    v.x=0
+  }
+})
+
+
+// Matter.Events.on(engine,"collisionActive",function(event){
+//   Composite.remove(engine.world,event.pairs[0].bodyB)// 碰撞时，移除主动碰撞物体
+//   Matter.Common.log("碰撞中：",event.pairs[0])
+// })
+
+
+Composite.add(engine.world,[ground,wallLeft,wallRight,boxA,boxB,mouseConstraint])
+
+Render.run(render)
+Runner.run(runner,engine)
+
+
+```
+
+**效果展示**
+
+![效果展示](./example3.gif)
