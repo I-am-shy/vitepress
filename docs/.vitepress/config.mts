@@ -53,6 +53,7 @@ export default defineConfig({
             ],
             collapsed: true
           },
+          { text: "Deno",link: "/JS/Deno/"},
           { text: "js爬虫", link: "/JS/Clawler/" },
           { text: "js流", link: "/JS/Stream/"},
           { text: "http-server",link: "/JS/http-server/"},

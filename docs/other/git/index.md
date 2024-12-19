@@ -121,6 +121,13 @@ git checkout -b <branchName>
 #### 合并分支
 ```bash
 git merge <branchName>
+git rebase <branchName>
+```
+
+#### 取消合并分支
+```bash
+git merge --abort
+git rebase --abort
 ```
 
 #### 克隆远程仓库
