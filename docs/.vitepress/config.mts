@@ -70,10 +70,18 @@ export default defineConfig({
         collapsed: false
       },
       {
+        text: "vscode插件",
+        items:[
+          {text: "vscode插件开发", link: "/vscodeExtensions/"}
+        ],
+        collapsed: false
+      },
+      {
         text: "其他",
         items:[
           {text: "YAML", link: "/other/yaml/"},
           {text: "常用的git命令", link: "/other/git/"},
+          {text: "git修改pr", link: "/other/git/pr"},
           {text: "常用的unix命令", link: "/other/unix/"}
         ],
         collapsed: false
