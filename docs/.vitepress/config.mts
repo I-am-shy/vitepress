@@ -72,7 +72,9 @@ export default defineConfig({
       {
         text: "vscode插件",
         items:[
-          {text: "vscode插件开发", link: "/vscodeExtensions/"}
+          {text: "vscode插件开发", link: "/vscodeExtensions/"},
+          {text: "vscode文本编辑API", link: "/vscodeExtensions/textEditor"},
+          {text: "vscode用户代码片段", link: "/vscodeExtensions/userCode"}
         ],
         collapsed: false
       },
@@ -82,7 +84,9 @@ export default defineConfig({
           {text: "YAML", link: "/other/yaml/"},
           {text: "常用的git命令", link: "/other/git/"},
           {text: "git修改pr", link: "/other/git/pr"},
-          {text: "常用的unix命令", link: "/other/unix/"}
+          {text: "常用的unix命令", link: "/other/unix/"},
+          {text: "XPath", link: "/other/xPath/"},
+          {text: "更多", link: "/other/more/"}
         ],
         collapsed: false
       }

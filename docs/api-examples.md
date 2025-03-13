@@ -3,6 +3,7 @@
 ---
 
 # 运行时 API 示例
+---
 
 :::tip
 更多关于文档页面的配置，请参阅 [配置](https://vitepress.dev/zh/reference/site-config)。

@@ -57,7 +57,7 @@ yo code
 
 :::warning
 
-package.json中要注意 engines.vscode 字段，这标识插件支持的最低vscode版本，
+package.json中要注意 engines.vscode 字段，这表示插件支持的最低vscode版本，
 
 README.md 必须要修改填写内容，否则无法打包插件
 

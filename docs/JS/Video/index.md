@@ -1,7 +1,6 @@
-
 # js实现拍摄和录屏
-
 ---
+
 <style>
   #text {
     text-indent: 2em;

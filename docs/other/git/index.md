@@ -1,4 +1,5 @@
 # git和git命令
+---
 
 基本概念：
 理解Git 的工作区、暂存区、仓库区、远程仓库
@@ -157,9 +158,12 @@ git rm <file>
 
 :::warning 更多
 
-删除本地git仓(库删除根目录下的.git文件夹，慎用)
+删除本地git仓库(删除根目录下的.git文件夹，慎用)
 ```bash
 find . -name ".git" | xargs rm -rf
 ```
 :::
 
+## 可视化学习 git
+
+git 的可视化学习网站： https://learngitbranching.js.org/?locale=zh_CN

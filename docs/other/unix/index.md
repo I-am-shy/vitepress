@@ -1,8 +1,10 @@
+# 常用的unix命令
+
+---
+
 :::tip
 苹果的OS X系统源自于Free BSD的源代码，从本质上来说OS X也是UNIX系统的分支。
 :::
-
-# 常用的unix命令
 
 这些命令允许您创建目录和处理文件已经管理系统用户和权限。
 
@@ -66,3 +68,34 @@
 :::tip
 `open .` 打开当前目录
 :::
+
+## 关于权限和环境变量
+
+### permission denied
+
+在 mac 中使用命令遇到 `permission denied` 的错误，通常是因为权限不足，需要使用 `chmod` 命令来修改文件的权限，或者在命令前加上 `sudo` 输入登录密码来获取更高的权限。
+
+### 环境变量
+
+### 查看环境变量
+```bash
+echo $PATH
+```
+
+### mac设置环境变量
+
+1. 打开终端（Terminal）。
+2. 输入以下命令来编辑你的shell配置文件。如果你使用的是bash，那么文件是.bash_profile；如果是zsh，则是.zshrc。如果你不确定使用的是哪个shell，可以通过在终端输入echo $SHELL来查看。
+- 对于bash：
+`nano ~/.bash_profile`
+- 对于zsh：
+`nano ~/.zshrc`
+3. 在打开的文件中，在文件末尾添加你需要的环境变量。例如，设置PATH变量：
+`export PATH=$PATH:/your/new/directory`
+
+`$PATH` :  表示原来的环境变量参数，这里将新的环境变量接在后面
+或者设置一个新的环境变量：
+`export MY_VARIABLE="some_value"`
+4. 保存并关闭文件。如果你使用的是 nano (也可以使用 vi，vim)，可以按 `Ctrl + X`，然后按 `Y` 确认保存，最后按 `Enter` 键。
+5. 最后重新打开终端生效
+

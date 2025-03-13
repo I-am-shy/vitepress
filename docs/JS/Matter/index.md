@@ -1,5 +1,7 @@
 # js 2d物理引擎库 Matter.js
 
+---
+
 [Matter.js](https://www.brm.io/matter-js/) 是一个用于 JavaScript 的 2D 物理引擎库，用于创建和模拟物理对象的运动。它提供了丰富的功能，包括刚体、约束、力、碰撞检测等，非常适合用于游戏开发、物理模拟和动画效果。
 
 ## 原理
