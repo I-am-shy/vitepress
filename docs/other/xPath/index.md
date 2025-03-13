@@ -4,7 +4,7 @@
 XPath: 网页中定位html（包含XML）元素的语法
 ## 获取XPath的方式
 ### 通过浏览器的开发者工具，找的元素右键，选择复制--->复制XPath
-![alt text](image.png)
+![alt text](./image.png)
 ### 通过语法规则自定义
 1. 使用位置顺序
 以下是一个XPath：
