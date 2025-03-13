@@ -99,3 +99,12 @@ echo $PATH
 4. 保存并关闭文件。如果你使用的是 nano (也可以使用 vi，vim)，可以按 `Ctrl + X`，然后按 `Y` 确认保存，最后按 `Enter` 键。
 5. 最后重新打开终端生效
 
+
+## mac 查看ip
+```bash
+#查看ip完整信息
+ifconfig 
+
+#查看en0 接口的 IP 地址（通常是 Wi-Fi 接口）
+ipconfig getifaddr en0
+```
