@@ -17,6 +17,6 @@ vscode.TextEditor有以下属性：
   这是vscode的位置类型，用于表达文本编辑器里的位置，有两个属性：line和character
 关注过vscode下面信息栏的下面这个信息，就知道这两个属性表达的意思了。
 
-![alt text](img/example.png)
+![alt text](./img/example.png)
 
 但是这两个属性与上图有一个不一致的，上图是从1开始计数，而 position 的两个属性是从0开始计数
