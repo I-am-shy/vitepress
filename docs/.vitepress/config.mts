@@ -117,5 +117,8 @@ export default defineConfig({
       prev: '上一页',
       next: '下一页'
     }
+  },
+  vite: {
+    assetsInclude: ['**/*.PNG', '**/*.png']
   }
 })
