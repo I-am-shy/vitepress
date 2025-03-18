@@ -7,4 +7,4 @@
 
 ---
 
-持续更新中，记录学习过程，整理零散内容，点击这里[查看更多](https://i-am-shy.github.io/vitepress/)
+持续更新中，记录学习过程，整理零散内容，点击这里<a href="https://i-am-shy.github.io/vitepress/" target="_blank">查看更多</a>
