@@ -84,6 +84,7 @@ export default defineConfig({
           {text: "YAML", link: "/other/yaml/"},
           {text: "常用的git命令", link: "/other/git/"},
           {text: "git修改pr", link: "/other/git/pr"},
+          {text: "git配置", link: "/other/git/config"},
           {text: "常用的unix命令", link: "/other/unix/"},
           {text: "XPath", link: "/other/xPath/"},
           {text: "更多", link: "/other/more/"}
