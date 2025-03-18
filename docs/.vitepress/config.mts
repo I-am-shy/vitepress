@@ -79,6 +79,13 @@ export default defineConfig({
         collapsed: false
       },
       {
+        text: "docker",
+        items:[
+          {text: "docker安装", link: "/docker/"},
+        ],
+        collapsed: false
+      },
+      {
         text: "其他",
         items:[
           {text: "YAML", link: "/other/yaml/"},
