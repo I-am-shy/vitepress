@@ -82,6 +82,7 @@ export default defineConfig({
         text: "docker",
         items:[
           {text: "docker安装", link: "/docker/"},
+          {text: "docker基本命令", link: "/docker/command/"},
         ],
         collapsed: false
       },
