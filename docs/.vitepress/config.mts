@@ -30,7 +30,8 @@ export default defineConfig({
         text: "JS",
         items: [
           {
-            text: "js原生", items: [
+            text: "js原生", 
+            items: [
               {
                 text: "API",
                 items: [
@@ -39,10 +40,12 @@ export default defineConfig({
                 ],
                 collapsed: true
               },
-            ]
+            ],
+            collapsed: true
           },
           {
-            text: "js库", items: [
+            text: "js库", 
+            items: [
               {
                 text: "js动画库",
                 items: [
@@ -64,7 +67,8 @@ export default defineConfig({
               { text: "http-server", link: "/JS/lib/http-server/" },
               { text: "html转markdown", link: "/JS/lib/Turndown/" },
               { text: "2d物理引擎", link: "/JS/lib/Matter/" },
-            ]
+            ],
+            collapsed: true
           },
           { text: "Deno", link: "/JS/Deno/" },
         ],
