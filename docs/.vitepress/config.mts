@@ -14,17 +14,16 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
-      { text: 'md语法', link: '/markdown-examples' },
+      { text: '页面配置', items:[
+        { text: 'md语法', link: '/markdown-examples' },
+        { text: '页面配置参考', link: '/api-examples' },
+      ]},
     ],
 
     sidebar: [
       {
-        text: 'md语法',
-        items: [
-          { text: 'Markdown语法参考', link: '/markdown-examples' },
-          { text: '页面配置参考', link: '/api-examples' }
-        ],
-        collapsed: false
+        text: '关于前端开发',
+        link: '/target'
       },
       {
         text: "JS",
@@ -94,7 +93,8 @@ export default defineConfig({
         text: "docker",
         items: [
           { text: "docker安装", link: "/docker/" },
-          { text: "docker基本命令", link: "/docker/command/" },
+          { text: "docker基本命令", link: "/docker/command" },
+          { text: "docker打包网页", link: "/docker/build" },
         ],
         collapsed: false
       },

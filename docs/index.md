@@ -7,11 +7,11 @@ hero:
   tagline: 关于我的前端开发，以及前端可以做什么
   actions:
     - theme: brand
+      text: 开始
+      link: /target
+    - theme: alt
       text: Markdown语法参考
       link: /markdown-examples
-    - theme: alt
-      text: 页面配置参考
-      link: /api-examples
 
 
 
