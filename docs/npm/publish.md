@@ -17,8 +17,15 @@
 - `publishConfig` 发布配置。`publishConfig.access` 配置发布权限，有 `public` 和 `private` 两种。`publishConfig.registry` 配置发布仓库地址，默认是 `https://registry.npmjs.org/`。
 - `keywords` 关键词，发布后会出现在 npm 官网的包检索页，用于检索
 - `author` 作者名，发布后会出现在 npm 官网的包详情页
-- `license` 许可证，发布后会出现在 npm 官网的包详情页
+- `license` 许可证，开源许可说明，发布后会出现在 npm 官网的包详情页
 - `private` 是否私有，`true` 表示私有，`false` 表示公开。默认为 `true`，只要设置为 `false` 才能发布。
+
+:::warning 关于 `license` 字段
+
+`license` 字段是许可证，开源许可说明。常见的许可证有 `MIT`、`Apache`、`BSD`、`GPL`、`LGPL`、`ISC` 等。
+更多可参考[这里](https://zhuanlan.zhihu.com/p/62578705)
+
+:::
 
 ## 发布
 
