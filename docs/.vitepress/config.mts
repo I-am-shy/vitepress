@@ -66,6 +66,7 @@ export default defineConfig({
               { text: "http-server", link: "/JS/lib/http-server/" },
               { text: "html转markdown", link: "/JS/lib/Turndown/" },
               { text: "2d物理引擎", link: "/JS/lib/Matter/" },
+              { text: "Express", link: "/JS/lib/Express/" },
             ],
             collapsed: true
           },
@@ -77,6 +78,14 @@ export default defineConfig({
         text: "TS",
         items: [
           { text: "在任意位置运行ts", link: "/TS/run-TS/" }
+        ],
+        collapsed: false
+      },
+      {
+        text: "npm",
+        items: [
+          { text: "npm", link: "/npm/" },
+          { text: "npm发布包", link: "/npm/publish" },
         ],
         collapsed: false
       },
