@@ -146,7 +146,7 @@ git remote add <remoteName> <url>
 ```bash
 # file --- 具体的文件路径（可通过git status查看），没有file参数时会取消所有提交
 git reset <file>
-# 回退到一次commit   
+# 回退一次commit   
 # --soft：回退并保留更改，--hard：回退不保留更改
 git reset [--soft][--hard] HEAD^
 # commit --- commit id 
@@ -155,6 +155,16 @@ git checkout <commit id>
 # file --- [文件路径]
 git rm <file>
 ```
+
+```bash
+# 撤销add操作 
+git reset HEAD <file> 
+git reset HEAD .
+# 放弃更改
+git checkout - <file>
+git checkout .
+```
+
 
 :::warning 更多
 
