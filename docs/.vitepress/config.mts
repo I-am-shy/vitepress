@@ -67,6 +67,7 @@ export default defineConfig({
               { text: "html转markdown", link: "/JS/lib/Turndown/" },
               { text: "2d物理引擎", link: "/JS/lib/Matter/" },
               { text: "Express", link: "/JS/lib/Express/" },
+              { text: "robotjs", link: "/JS/lib/Robotjs/" },
             ],
             collapsed: true
           },
