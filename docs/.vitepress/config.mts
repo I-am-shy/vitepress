@@ -50,7 +50,7 @@ export default defineConfig({
                 items: [
                   { text: "popmotion", link: "/JS/lib/Animation/" }
                 ],
-                collapsed: true
+                collapsed: false
               },
               {
                 text: "ThreeJS 3D模型",

@@ -43,6 +43,10 @@ node app.js
 
 ## 使用 express-generator 创建一个 Express 应用
 
+:::tip 提示
+也可以使用更简单的命令行工具来创建一个 Express 应用，具体可以参考 [express-server](./express-server.md)
+:::
+
 express-generator 是一个用于快速生成 Express 应用的工具。通过 express-generator 可以快速创建一个包含路由和静态资源结构的 Express 应用。
 
 
