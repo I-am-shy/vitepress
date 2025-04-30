@@ -3,7 +3,7 @@
 `@shyshi/express` 是一个用于快速生成 Express 应用的工具。通过 `@shyshi/express` 可以快速启动一个 Express 服务。
 
 :::tip 提示
-为什么使用 `@shyshi/express` ？对于初次使用的 express 用户，使用 `@shyshi/express` 可以快速的启动一个 Express 服务，且不需要复杂的配置参数。即足够简单又够用
+为什么使用 `@shyshi/express` ？对于初次使用的 express 用户，使用 `@shyshi/express` 可以快速的启动一个 Express 服务，且不需要复杂的配置参数（足够简单且够用）。
 :::
 
 使用 `npm` 全局安装 `@shyshi/express`
@@ -13,7 +13,7 @@ npm install -g @shyshi/express
 
 创建一个 Express 应用
 ```bash
-express-server myapp
+express-server 
 ```
 
 或者直接使用 `npx`

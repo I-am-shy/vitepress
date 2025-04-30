@@ -14,10 +14,12 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
-      { text: '页面配置', items:[
-        { text: 'md语法', link: '/markdown-examples' },
-        { text: '页面配置参考', link: '/api-examples' },
-      ]},
+      {
+        text: '页面配置', items: [
+          { text: 'md语法', link: '/markdown-examples' },
+          { text: '页面配置参考', link: '/api-examples' },
+        ]
+      },
     ],
 
     sidebar: [
@@ -29,7 +31,7 @@ export default defineConfig({
         text: "JS",
         items: [
           {
-            text: "js原生", 
+            text: "js原生",
             items: [
               {
                 text: "API",
@@ -43,7 +45,7 @@ export default defineConfig({
             collapsed: true
           },
           {
-            text: "js库", 
+            text: "js库",
             items: [
               {
                 text: "js动画库",
@@ -62,14 +64,21 @@ export default defineConfig({
                 ],
                 collapsed: true
               },
+              { 
+                text: "Express", 
+                items: [
+                  { text: "express 框架", link: "/JS/lib/Express/" },
+                  { text: "express 命令行工具", link: "/JS/lib/Express/express-server" },
+                ], 
+                collapsed: true 
+              },
               { text: "js爬虫", link: "/JS/lib/Clawler/" },
               { text: "http-server", link: "/JS/lib/http-server/" },
               { text: "html转markdown", link: "/JS/lib/Turndown/" },
               { text: "2d物理引擎", link: "/JS/lib/Matter/" },
-              { text: "Express", link: "/JS/lib/Express/" },
               { text: "robotjs", link: "/JS/lib/Robotjs/" },
             ],
-            collapsed: true
+            collapsed: false
           },
           { text: "Deno", link: "/JS/Deno/" },
         ],
