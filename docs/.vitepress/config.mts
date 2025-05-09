@@ -41,8 +41,9 @@ export default defineConfig({
                 ],
                 collapsed: true
               },
+              { text: "js脚本", link: "/JS/native/script/" },
             ],
-            collapsed: true
+            collapsed: false
           },
           {
             text: "js库",
@@ -52,7 +53,7 @@ export default defineConfig({
                 items: [
                   { text: "popmotion", link: "/JS/lib/Animation/" }
                 ],
-                collapsed: false
+                collapsed: true
               },
               {
                 text: "ThreeJS 3D模型",
@@ -64,15 +65,21 @@ export default defineConfig({
                 ],
                 collapsed: true
               },
-              { 
-                text: "Express", 
+              {
+                text: "Express",
                 items: [
                   { text: "express 框架", link: "/JS/lib/Express/" },
                   { text: "express 命令行工具", link: "/JS/lib/Express/express-server" },
-                ], 
-                collapsed: true 
+                ],
+                collapsed: true
               },
-              { text: "js爬虫", link: "/JS/lib/Clawler/" },
+              {
+                text: "js爬虫", items: [
+                  { text: "爬虫示例", link: "/JS/lib/Clawler/" },
+                  { text: "puppeteer", link: "/JS/lib/Clawler/puppeteer" },
+                ],
+                collapsed: true
+              },
               { text: "http-server", link: "/JS/lib/http-server/" },
               { text: "html转markdown", link: "/JS/lib/Turndown/" },
               { text: "2d物理引擎", link: "/JS/lib/Matter/" },
@@ -160,5 +167,8 @@ export default defineConfig({
   },
   vite: {
     assetsInclude: ['**/*.PNG', '**/*.png']
+  },
+  sitemap: {
+    hostname: "https://i-am-shy.github.io/vitepress/"
   }
 })

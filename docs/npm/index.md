@@ -87,7 +87,7 @@ npm install -g .
 ```
 `-g` 参数表明进行全局安装，`.` 代表当前目录。
 
-### 5. 验证全局使用
+### 验证全局使用
 全局安装完成后，你就可以在任何目录下使用之前在 `package.json` 中定义的命令了。例如：
 ```bash
 your-command hello world
