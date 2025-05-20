@@ -142,12 +142,12 @@ git clone <url>
 # remoteName --- 远程仓库名称 url --- 远程仓库地址
 git remote add <remoteName> <url>
 ```
-#### 撤销删除操作
+#### 撤销和删除操作
 ```bash
 # file --- 具体的文件路径（可通过git status查看），没有file参数时会取消所有提交
 git reset <file>
 # 回退一次commit   
-# --soft：回退并保留更改，--hard：回退不保留更改
+# --soft：回退并暂存更改，--hard：回退不暂存更改
 git reset [--soft][--hard] HEAD^
 # commit --- commit id 
 git checkout <commit id>
@@ -165,7 +165,6 @@ git checkout - <file>
 git checkout .
 ```
 
-
 :::warning 更多
 
 删除本地git仓库(删除根目录下的.git文件夹，慎用)
@@ -173,6 +172,68 @@ git checkout .
 find . -name ".git" | xargs rm -rf
 ```
 :::
+
+#### 解决冲突
+
+**变基冲突解决流程**
+1. 遇到冲突：
+```bash
+$ git rebase main
+CONFLICT (content): Merge conflict in file.txt
+```
+2. 查看冲突文件：
+```bash
+$ git status
+# 显示未合并的文件
+```
+3. 手动解决冲突：
+  - 编辑冲突文件，删除冲突标记（<<<<<<<、=======、>>>>>>>）。
+  - 保留正确的代码。
+4. 标记冲突已解决：
+```bash
+$ git add file.txt
+```
+5. 继续变基：
+```bash
+$ git rebase --continue
+```
+
+
+```bash
+git rebase (--continue | --abort | --skip)
+```
+
+**控制 rebase 流程**
+
+1. git rebase --continue   
+作用：在解决冲突或执行完手动操作后，继续进行变基过程。   
+场景：当 git rebase 因冲突暂停时，你需要   
+  - 手动解决冲突文件。
+  - 使用 git add 将冲突文件标记为已解决。
+  - 执行 git rebase --continue 继续应用剩余的提交。
+
+2. git rebase --abort   
+作用：完全放弃当前变基操作，恢复到变基前的状态。      
+场景：   
+  - 遇到无法解决的复杂冲突。
+  - 发现变基策略错误，需要重新开始。
+  - 变基过程中出现意外问题。
+
+3. git rebase --skip      
+作用：跳过当前导致冲突的提交，继续应用后续提交。   
+场景：   
+  - 某个提交包含不必要的更改，希望忽略它。
+  - 提交内容已通过其他方式合并，无需重复应用。
+
+
+| 参数|作用|适用场景|
+| --- | --- | --- |
+|continue | 解决冲突后继续变基         | 冲突已手动解决，希望继续应用剩余提交  |
+|abort    | 放弃变基，恢复到变基前状态 | 遇到无法解决的冲突或需要重新开始变基   |
+|skip     | 跳过当前提交，继续变基     | 当前提交内容不需要或已通过其他方式合并 |
+
+
+
 
 ## 可视化学习 git
 
