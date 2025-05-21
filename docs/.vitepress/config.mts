@@ -41,7 +41,7 @@ export default defineConfig({
                 ],
                 collapsed: true
               },
-              { text: "js脚本", link: "/JS/native/script/" },
+              { text: "JS(TS) 代码片段", link: "/JS/native/script/" },
             ],
             collapsed: false
           },

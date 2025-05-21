@@ -1,4 +1,4 @@
-# 记录一些 js 脚本
+# JS(TS) 代码片段
 
 ## 命令行 loading 效果
 
@@ -77,3 +77,65 @@ function createLoadingAnimation(options = {}) {
 ```
 
 ---
+
+## HTML Table to MD Table
+
+```ts
+function convertHtmlTableToMarkdown(htmlTable: string) {
+	// Split HTML table into rows
+	const rows = htmlTable.match(/<tr[^>]*>[\s\S]*?<\/tr>/gi);
+	if (!rows) return '';
+
+	let markdownTable = '';
+	let isHeaderRow = true;
+
+	// Process each row
+	rows.forEach((row, index) => {
+		// Split row into header cells or regular cells
+		const headerCells = row.match(/<th[^>]*>[\s\S]*?<\/th>/gi) || [];
+		const dataCells = row.match(/<td[^>]*>[\s\S]*?<\/td>/gi) || [];
+		const cells = headerCells.length > 0 ? headerCells : dataCells;
+		if (cells.length === 0) return;
+
+		// Process each cell
+		const rowContent = cells.map(cell => {
+			// Extract cell content
+			const cellContent = cell.replace(/<\/?(td|th)[^>]*>/gi, '');
+
+			// Remove leading/trailing whitespace and convert line breaks to spaces
+			return cellContent.trim().replace(/\n/g, ' ');
+		}).join(' | ');
+
+		// Add row content to markdown table
+		markdownTable += '| ' + rowContent + ' |\n';
+
+		// Add the header separator after the header row
+		if (isHeaderRow && headerCells.length > 0) {
+			markdownTable += '| ';
+			cells.forEach(() => markdownTable += ':-- | ');
+			markdownTable += '\n';
+			isHeaderRow = false;
+		}
+	});
+
+	return markdownTable;
+}
+```
+
+## VSCode extension 获取选中文本
+
+```ts
+// 获取选中鼠标选中编辑页面的范围
+const selection = editor.selection;
+// 获取指定编辑页面范围的字符
+const selectedText = editor.document.getText(selection);
+
+```
+
+## 线程休眠函数(Sleep)
+
+```js
+function Sleep(time){
+  return new Promise(resolve => setTimeout(resolve, time))
+}
+```
