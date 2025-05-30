@@ -70,3 +70,22 @@ source myVenv/bin/activate
 - c++：lambda表达式
 - c#：lambda表达式、匿名方法
 
+
+## 使用 powershell 创建简单的 Windows 窗体
+
+在 windows 操作系统中使用 powershell 即可创建简单的 Windows 窗体，具体可参考[此处](https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.forms.form?view=windowsdesktop-8.0)
+
+```bash
+Add-Type -AssemblyName System.Windows.Forms
+$form = New-Object System.Windows.Forms.Form
+$form.Text = "程序"
+$form.Size = New-Object System.Drawing.Size(500, 300)
+# 显示窗口
+$form.ShowDialog()
+$form.ShowDialog()
+
+```
+
+:::tip 原理
+powershell 使用的是 .net 语言，是一个标准的编程语言提供了很多操作系统相关的 API。这里用的就是 `System.Windows.Forms` 对象创建的窗口。
+:::
