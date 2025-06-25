@@ -85,6 +85,7 @@ export default defineConfig({
               { text: "html转markdown", link: "/JS/lib/Turndown/" },
               { text: "2d物理引擎", link: "/JS/lib/Matter/" },
               { text: "robotjs", link: "/JS/lib/Robotjs/" },
+              { text: "Monaco Editor", link: "/JS/lib/Monaco/" },
             ],
             collapsed: false
           },

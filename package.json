@@ -8,6 +8,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
+    "monaco-editor": "^0.52.2",
     "three": "^0.176.0"
   }
 }
