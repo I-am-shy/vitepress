@@ -1,45 +1,31 @@
 <script setup>
-import * as monaco from "monaco-editor"
-import { ref, onMounted } from "vue"
+import { ref, onMounted, reactive } from "vue"
 
 const container = ref(null)
-const themeColors = [
-  "#577b48",
-  "#6db3fd",
-  "#be8770",
-  "#1e1e1e",
-  "#d4d4d4",
-  "#3c3c3c",
-  "#3c3c3c",
-  "#d4d4d4",
-  "#d4d4d4"
-]
-
-
-function updateThemeColor(colors){
-  monaco.editor.defineTheme("update-theme",{
-    base:"vs-dark",
-    inherit:true,
-    rules: [
-      { token: "comment", foreground: colors[0], fontStyle: "italic" }, // 注释颜色和字体样式
-      { token: "keyword", foreground: colors[1] },// 编程语言关键字颜色
-      { token: "string", foreground: colors[2] },// 字符串字面量颜色
-    ],
-    colors:{
-      "editor.background": colors[3],
-      "editor.foreground": colors[4],
-      "editor.lineHighlightBackground": colors[5],
-      "editor.selectionBackground": colors[6],
-      "editorCursor.foreground": colors[7],
-      "editorLineNumber.foreground": colors[8],
-    }
-  })
-  monaco.editor.setTheme("update-theme") // 设置全局编辑器主题
-}
-
+const themeColors = reactive([
+    "#577b48",
+    "#6db3fd",
+    "#be8770",
+    "#1e1e1e",
+    "#d4d4d4",
+    "#3c3c3c",
+    "#3c3c3c",
+    "#d4d4d4",
+    "#d4d4d4"
+  ])
 
 onMounted(async () => {
-  const text = await ((await fetch("/vitepress/editor.js")).text())
+  
+  const monaco = await import('monaco-editor/esm/vs/editor/editor.api')
+
+  // 动态引入常用语言
+  await import('monaco-editor/esm/vs/basic-languages/javascript/javascript.contribution')
+  await import('monaco-editor/esm/vs/basic-languages/typescript/typescript.contribution')
+  // await import('monaco-editor/esm/vs/basic-languages/json/json.contribution')
+  await import('monaco-editor/esm/vs/basic-languages/css/css.contribution')
+  await import('monaco-editor/esm/vs/basic-languages/html/html.contribution')
+
+  const text = await ((await fetch("/vitepress/editor.js")).text()) 
   // 挂载内容和语言
   const editor = monaco.editor.create(container.value,{
     value: text,
@@ -60,14 +46,36 @@ onMounted(async () => {
     }
   })
 
+
+  function updateThemeColor(colors){
+    monaco.editor.defineTheme("update-theme",{
+      base:"vs-dark",
+      inherit:true,
+      rules: [
+        { token: "comment", foreground: colors[0], fontStyle: "italic" }, // 注释颜色和字体样式
+        { token: "keyword", foreground: colors[1] },// 编程语言关键字颜色
+        { token: "string", foreground: colors[2] },// 字符串字面量颜色
+      ],
+      colors:{
+        "editor.background": colors[3],
+        "editor.foreground": colors[4],
+        "editor.lineHighlightBackground": colors[5],
+        "editor.selectionBackground": colors[6],
+        "editorCursor.foreground": colors[7],
+        "editorLineNumber.foreground": colors[8],
+      }
+    })
+    monaco.editor.setTheme("update-theme") // 设置全局编辑器主题
+  }
+  
   // 定义和设置主题
   monaco.editor.defineTheme("default-Theme",{
     base:"vs-dark", // 根主题
     inherit: true, // 是否继承现有主题
     rules: [
-      { token: "comment", foreground: "577b48", fontStyle: "italic" }, // 注释颜色和字体样式
-      { token: "keyword", foreground: "6db3fd" },// 编程语言关键字颜色
-      { token: "string", foreground: "be8770" },// 字符串字面量颜色
+      { token: "comment", foreground: "#577b48", fontStyle: "italic" }, // 注释颜色和字体样式
+      { token: "keyword", foreground: "#6db3fd" },// 编程语言关键字颜色
+      { token: "string", foreground: "#be8770" },// 字符串字面量颜色
     ],
     colors: {
       // 编辑器主体
@@ -87,9 +95,9 @@ onMounted(async () => {
 
   colorInput.forEach((item,index)=>{
     item.value = themeColors[index]
-    console.log(item.value)
+    // console.log(item.value)
     item.addEventListener("input",(e)=>{
-      console.log(e.target.value)
+      // console.log(e.target.value)
       themeColors[index] = e.target.value
       updateThemeColor(themeColors)
     })

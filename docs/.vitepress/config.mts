@@ -168,7 +168,15 @@ export default defineConfig({
     }
   },
   vite: {
-    assetsInclude: ['**/*.PNG', '**/*.png']
+    assetsInclude: ['**/*.PNG', '**/*.png'],
+    resolve: {
+      // alias: {
+      //   'monaco-editor': 'monaco-editor/esm/vs/editor/editor.api'
+      // }
+    },
+    ssr: {
+      noExternal: ['monaco-editor']
+    }
   },
   sitemap: {
     hostname: "https://i-am-shy.github.io/vitepress/"

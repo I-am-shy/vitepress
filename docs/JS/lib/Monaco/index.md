@@ -1,5 +1,5 @@
 <script setup>
-import Editor from "../../../components/editor.vue"
+import Editor from "../../../components/editor.vue" 
 </script>
 
 
@@ -259,7 +259,9 @@ npx vite
 运行结果如下：
 
 <div id="container">
-  <Editor />
+  <client-only>
+    <Editor />
+  </client-only>
 </div>
 
 <style>
