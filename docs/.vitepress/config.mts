@@ -86,6 +86,7 @@ export default defineConfig({
               { text: "2d物理引擎", link: "/JS/lib/Matter/" },
               { text: "robotjs", link: "/JS/lib/Robotjs/" },
               { text: "Monaco Editor", link: "/JS/lib/Monaco/" },
+              { text: "highlight.js", link: "/JS/lib/hljs/" },
             ],
             collapsed: false
           },
