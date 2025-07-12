@@ -1,5 +1,5 @@
 # wireguard 
-
+---
 
 [WireGuard](https://zh-wireguard.com/) 是一款极其简单但快速且现代的 VPN。
 

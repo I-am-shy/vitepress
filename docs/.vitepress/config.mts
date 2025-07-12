@@ -137,6 +137,7 @@ export default defineConfig({
           { text: "常用的unix命令", link: "/other/unix/" },
           { text: "XPath", link: "/other/xPath/" },
           { text: "wireguard", link:"/other/wireguard/"},
+          { text: "clash", link: "/other/clash/" },
           { text: "更多", link: "/other/more/" }
         ],
         collapsed: false
