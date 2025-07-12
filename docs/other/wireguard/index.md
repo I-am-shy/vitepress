@@ -6,7 +6,7 @@
  wg genkey | tee privatekey | wg pubkey | tee publickey
 
 wg_conf:
-```
+```conf
 [Interface]
 Address = 10.8.0.1/24       # 服务端 VPN 内网 IP（建议使用 `/24` 子网）
 ListenPort = 51820
@@ -26,7 +26,7 @@ AllowedIPs = 10.8.0.3/32
 
 peer.conf:
 
-```
+```conf
 [Interface]
 PrivateKey = SB5wir76VVHasdnMhpr5djzYozv7kPhfCZoC5jyeFGI=
 Address = 192.168.196.2 # 客户端内网 IP，需与服务器网段一致
@@ -42,13 +42,13 @@ PersistentKeepalive = 25
 
 # 用 wg-quick 调用 wg0.conf 管理 WireGuard
 
-可以把 WireGuard 的配置保存在一个配置文件中（见 [1.用 Linode 主机搭建 WireGuard 网络](1.用%20Linode%20主机搭建%20WireGuard%20网络.md) ），启动虚拟网卡时直接调用。配置文件可以起任何文件名，扩展名必须为 .conf ，默认存储在 `/etc/wireguard/` 目录，也可以存储到其它系统默认的查找路径中，以下假设使用的配置文件为 `wg0.conf` 。
+可以把 WireGuard 的配置保存在一个配置文件中，启动虚拟网卡时直接调用。配置文件可以起任何文件名，扩展名必须为 .conf ，默认存储在 `/etc/wireguard/` 目录，也可以存储到其它系统默认的查找路径中，以下假设使用的配置文件为 `wg0.conf` 。
 
 ## 1. wg0.conf 参数
 
 配置文件分两部分，一个是 [Interface] 部分，用于设置本机的参数；一个是 [Peer] 部分，用于设置连接到本机的其它电脑的参数，[Peer] 部分可以包含多个节点。
 
-```
+```conf
 [Interface]
 Address =  
 ListenPort =  
@@ -92,7 +92,7 @@ PersistentKeepalive =
 
 文件位置：服务器 `/etc/wireguard/wg0.conf`
 
-```
+```conf
 [Interface]
 Address = 10.0.0.1
 ListenPort = 39814
@@ -112,7 +112,7 @@ PublicKey = odnA2mMWrxRuKydr61bOL3xyGcKiD0KY7O33X8Rm4Hg=
 
 文件位置：本地机 `/etc/wireguard/wg0.conf`
 
-```
+```conf
 [Interface]
 Address = 10.0.0.2
 ListenPort = 39815
@@ -130,7 +130,7 @@ PersistentKeepalive = 25
 
 启动虚拟网络执行 `wg-quick up wg0` ，正确执行后显示如下：
 
-```
+```conf
 [#] ip link add wg1 type wireguard
 [#] wg setconf wg1 /dev/fd/63
 [#] ip address add 10.0.0.2 dev wg1
@@ -145,7 +145,7 @@ PersistentKeepalive = 25
 
 关闭虚拟网络执行 `wg-quick down wg0` ，正确执行后显示如下：
 
-```
+```conf
 [#] ip -4 rule delete table 51820
 [#] ip -4 rule delete table main suppress_prefixlength 0
 [#] ip link delete dev wg1
@@ -157,4 +157,4 @@ PersistentKeepalive = 25
 1. 内网地址的范围（中文）：https://zh.wikipedia.org/wiki/%E4%B8%93%E7%94%A8%E7%BD%91%E7%BB%9C
 2. 内网地址的范围（英文）：https://en.wikipedia.org/wiki/Private_network 
 3. TCP/UDP 端口列表：https://zh.wikipedia.org/wiki/TCP/UDP%E7%AB%AF%E5%8F%A3%E5%88%97%E8%A1%A8
-4. [Iptables (简体中文)](https://wiki.archlinux.org/index.php/Iptables_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+4. [Iptables (简体中文)]( https://wiki.archlinuxcn.org/wiki/Iptables?rdfrom=https%3A%2F%2Fwiki.archlinux.org%2Findex.php%3Ftitle%3DIptables_%28%25E7%25AE%2580%25E4%25BD%2593%25E4%25B8%25AD%25E6%2596%2587%29%26redirect%3Dno )
