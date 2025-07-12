@@ -136,6 +136,7 @@ export default defineConfig({
           { text: "git配置", link: "/other/git/config" },
           { text: "常用的unix命令", link: "/other/unix/" },
           { text: "XPath", link: "/other/xPath/" },
+          { text: "wireguard", link:"/other/wireguard/"},
           { text: "更多", link: "/other/more/" }
         ],
         collapsed: false
