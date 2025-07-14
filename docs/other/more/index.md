@@ -89,3 +89,32 @@ $form.ShowDialog()
 :::tip 原理
 powershell 使用的是 .net 语言，是一个标准的编程语言提供了很多操作系统相关的 API。这里用的就是 `System.Windows.Forms` 对象创建的窗口。
 :::
+
+## Linux 设置 ssh 密码连接
+
+启用 SSH 密码认证，需要对服务器端的 SSH 配置文件进行修改。
+
+```bash
+sudo vim /etc/ssh/sshd_config
+```
+
+在配置文件里，找到以下两行内容，并进行相应修改：
+
+```bash
+PasswordAuthentication yes
+PermitRootLogin yes      # 若需要以 root 账号通过密码登录，则启用此项
+```
+
+之后就可以在本地使用 ssh 密码连接
+
+```bash
+ssh root@127.0.0.1
+```
+
+输入 root 账户的密码即可连接
+
+:::tip 设置账户密码
+
+输入 `passwd` 设置密码，如果有旧密码则需要输入旧密码进行验证
+
+:::

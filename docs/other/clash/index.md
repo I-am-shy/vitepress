@@ -51,10 +51,10 @@ ping 1.1.1.1 # ping google.com
 
 ### 获取 trojan 工具
 
-连接到服务器（通过服务器供应商控制台或者 ssh 连接），执行以下命令。
+连接到服务器的root用户 （通过服务器供应商控制台或者 ssh 连接），执行以下命令。
 
 ```bash
-curl -sL https://git.io/trojan-install
+source <(curl -sL https://git.io/trojan-install)
 ```
 
 安装完成后获得 `trojan` 命令
