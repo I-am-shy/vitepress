@@ -54,7 +54,9 @@ git remote -v
 ```
 #### 查看分支
 ```bash
-git branch
+git branch # 查看本地分支
+git branch -r # 查看远程分支
+git branch -a # 查看本地和远程分支
 ```
 
 ### 操作命令
@@ -86,6 +88,7 @@ git pull origin <branchName> --rebase
 # origin --- 远程仓库名称,可是通过git remote -v查看
 # branchName --- 要拉取的远程分支名称
 git fetch origin <branchName>
+git switch -c <branchName> origin/<branchName>
 ```
 
 #### 推送文件到远程仓库
