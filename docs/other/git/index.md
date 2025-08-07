@@ -8,8 +8,8 @@
 - 仓库区：存放了所有版本的数据
 - 远程仓库：即github、gitlab、gitee等代码托管平台
 
-![alt text](./image-1.png)
-![alt text](./image.png)
+![git](./image-1.png)
+![git](./image.png)
 
 :::details 关于pr[pull request]
 
@@ -58,6 +58,18 @@ git branch # 查看本地分支
 git branch -r # 查看远程分支
 git branch -a # 查看本地和远程分支
 ```
+
+#### 查看提交变更文件
+```bash
+git diff --name-only <commit id> <commit id> # 查看指定commit id之间的变更文件
+```
+
+:::warning HEAD
+`HEAD` 是当前分支的最新提交的引用，它指向当前分支的最新提交。即表示当前分支的 commit id
+`HEAD^` 是 `HEAD` 的父提交，它指向当前分支的上一提交。
+`HEAD^^` 是 `HEAD^` 的父提交，它指向当前分支的上一提交的上一提交。
+`HEAD~n` 是 `HEAD` 的第 n 代祖先，它指向当前分支的第 n 代祖先。
+:::
 
 ### 操作命令
 
