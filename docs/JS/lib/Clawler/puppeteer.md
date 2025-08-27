@@ -62,7 +62,11 @@ const puppeteer = require('puppeteer-core');
 
 (async () => {
   // 打开浏览器
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', // 必传！Puppeteer Core 需指定浏览器路径，传入本地chrome浏览器路径
+    headless: false, // 显示浏览器图形界面（调试时常用）
+    args: ['--start-maximized'] // 启动时最大化窗口
+  });
   // 打开新页面
   const page = await browser.newPage();
   // 访问页面

@@ -78,6 +78,7 @@ export default defineConfig({
                 text: "js爬虫", items: [
                   { text: "爬虫示例", link: "/JS/lib/Clawler/" },
                   { text: "puppeteer", link: "/JS/lib/Clawler/puppeteer" },
+                  { text: "puppeteer 和浏览器自动化", link: "/JS/lib/Clawler/auto-page" },
                 ],
                 collapsed: true
               },
