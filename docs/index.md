@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: "shy的学习笔记"
+  name: "shy 的学习笔记"
   text: "一个文档网站"
-  tagline: 关于我的前端开发，以及前端可以做什么
+  tagline: 关于前端开发，记录学习过程
   actions:
     - theme: brand
       text: 开始

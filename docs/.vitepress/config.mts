@@ -24,7 +24,7 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '关于前端开发',
+        text: '前端开发能力',
         link: '/target'
       },
       {
