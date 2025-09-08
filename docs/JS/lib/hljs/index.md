@@ -4,7 +4,7 @@ import Hljs from "../../../components/hljs/hljs.vue"
 
 
 # Highlight.js
-
+---
 [Highlight.js](https://highlightjs.org/) 是一个给代码语法高亮的 js 库，支持在 nodejs 和 web 中使用。 最新版本中已经内置了 192 种语言和 512 个主题。
 
 :::tip 原理

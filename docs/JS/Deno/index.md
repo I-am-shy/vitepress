@@ -1,5 +1,5 @@
 # Deno --- 下一代JavaScript和TypeScript运行时
-
+---
 [Deno](https://deno.org.cn/)是基于V8引擎和Rust语言所建立的JavaScript、TypeScript、WebAssembly执行环境，由Node.js的原始开发者 瑞安·达尔 所创造，deno 这个名字就是来自 Node 的字母重新组合（Node = no + de），表示"拆除 Node.js"（de = destroy, no = Node.js）。
 
 :::tip 与Node.js的比较:

@@ -38,6 +38,8 @@ export default defineConfig({
                 items: [
                   { text: "js实现拍摄和录屏功能", link: "/JS/native/Video/" },
                   { text: "js流", link: "/JS/native/Stream/" },
+                  { text: "js执行终端命令", link: "/JS/native/exec/" },
+                  { text: "js实现终端流式输出", link: "/JS/native/console/" },
                 ],
                 collapsed: true
               },
