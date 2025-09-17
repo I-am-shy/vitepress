@@ -40,6 +40,7 @@ export default defineConfig({
                   { text: "js流", link: "/JS/native/Stream/" },
                   { text: "js执行终端命令", link: "/JS/native/exec/" },
                   { text: "js实现终端流式输出", link: "/JS/native/console/" },
+                  { text: "js自定义事件", link: "/JS/native/event/" },
                 ],
                 collapsed: true
               },
