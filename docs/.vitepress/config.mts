@@ -31,16 +31,17 @@ export default defineConfig({
         text: "JS",
         items: [
           {
-            text: "js原生",
+            text: "js native",
             items: [
               {
-                text: "API",
+                text: "Samples",
                 items: [
-                  { text: "js实现拍摄和录屏功能", link: "/JS/native/Video/" },
-                  { text: "js流", link: "/JS/native/Stream/" },
-                  { text: "js执行终端命令", link: "/JS/native/exec/" },
-                  { text: "js实现终端流式输出", link: "/JS/native/console/" },
-                  { text: "js自定义事件", link: "/JS/native/event/" },
+                  { text: "实现拍摄和录屏功能", link: "/JS/native/Video/" },
+                  { text: "Stream 流", link: "/JS/native/Stream/" },
+                  { text: "执行终端命令", link: "/JS/native/exec/" },
+                  { text: "实现终端流式输出", link: "/JS/native/console/" },
+                  { text: "自定义事件", link: "/JS/native/event/" },
+                  { text: "长轮询 和 SSE", link: "/JS/native/sse/" },
                 ],
                 collapsed: true
               },
@@ -49,7 +50,7 @@ export default defineConfig({
             collapsed: false
           },
           {
-            text: "js库",
+            text: "js lib",
             items: [
               {
                 text: "js动画库",
