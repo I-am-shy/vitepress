@@ -46,6 +46,7 @@ export default defineConfig({
                 collapsed: true
               },
               { text: "JS(TS) 代码片段", link: "/JS/native/script/" },
+              { text: "TS 类型工具", link: "/TS/type-tools/" },
             ],
             collapsed: false
           },
