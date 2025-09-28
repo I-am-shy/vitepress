@@ -46,7 +46,6 @@ export default defineConfig({
                 collapsed: true
               },
               { text: "JS(TS) 代码片段", link: "/JS/native/script/" },
-              { text: "TS 类型工具", link: "/TS/type-tools/" },
             ],
             collapsed: false
           },
@@ -103,7 +102,8 @@ export default defineConfig({
       {
         text: "TS",
         items: [
-          { text: "在任意位置运行ts", link: "/TS/run-TS/" }
+          { text: "在任意位置运行ts", link: "/TS/run-TS/" },
+          { text: "TS 类型工具", link: "/TS/type-tools/" },
         ],
         collapsed: false
       },

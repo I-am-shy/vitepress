@@ -61,7 +61,7 @@ type T = Required<{ a?: number, b?: string, c: boolean }>;
 ```
 ## Awaited
 
-`Awaited<T extends Promise<any>>` 返回一个 T 的 promise 的返回值的类型。
+`Awaited<T>` 返回一个 T 的 promise 的返回值的类型。
 :::tip 说明
 支持嵌套的 promise，非 promise 类型会直接返回本身。
 :::
