@@ -134,6 +134,13 @@ export default defineConfig({
         collapsed: false
       },
       {
+        text: "AI",
+        items: [
+          { text: "AI 相关概念", link: "/AI/" },
+        ],
+        collapsed: false
+      },
+      {
         text: "其他",
         items: [
           { text: "YAML", link: "/other/yaml/" },
