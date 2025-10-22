@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { MermaidMarkdown, MermaidPlugin } from "vitepress-plugin-mermaid";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -137,6 +138,8 @@ export default defineConfig({
         text: "AI",
         items: [
           { text: "AI 相关概念", link: "/AI/" },
+          { text: "函数（工具）调用", link: "/AI/function-calling/" },
+          { text: "MCP 工具", link: "/AI/mcp-server/" },
         ],
         collapsed: false
       },
@@ -184,17 +187,26 @@ export default defineConfig({
     }
   },
   vite: {
+    plugins: [MermaidPlugin()], // 添加插件
     assetsInclude: ['**/*.PNG', '**/*.png'],
     resolve: {
       // alias: {
       //   'monaco-editor': 'monaco-editor/esm/vs/editor/editor.api'
       // }
     },
+    optimizeDeps: {
+      include: ['monaco-editor',"mermaid"], // 优化依赖
+    },
     ssr: {
-      noExternal: ['monaco-editor']
+      // noExternal: ['monaco-editor',"mermaid"]
     }
   },
   sitemap: {
     hostname: "https://i-am-shy.github.io/vitepress/"
+  },
+  markdown:{
+    config: (md) => {
+      md.use(MermaidMarkdown); // 添加 Mermaid 支持
+    }
   }
-})
+});
