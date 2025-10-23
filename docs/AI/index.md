@@ -16,7 +16,7 @@ Function Calling （函数调用，工具调用）是大模型扩展出来的一
 
 ## MCP --- 模型上下文协议
 
-MCP（Model Context Protocol）是一种通用协议，它定义了模型与工具之间的交互方式。即规范的 Function Calling ，借助 MCP 协议，可以实现工具的泛用性适配任意的 LLM 。
+[MCP](https://modelcontextprotocol.io/docs/getting-started/intro)（Model Context Protocol）是一种通用协议，它定义了模型与工具之间的交互方式。即规范的 Function Calling ，借助 MCP 协议，可以实现工具的泛用性适配任意的 LLM 。
 
 ## Agent --- 智能体
 
