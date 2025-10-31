@@ -154,6 +154,7 @@ export default defineConfig({
           { text: "XPath", link: "/other/xPath/" },
           { text: "wireguard", link:"/other/wireguard/"},
           { text: "clash", link: "/other/clash/" },
+          { text: "vercel", link: "/other/vercel/" },
           { text: "更多", link: "/other/more/" }
         ],
         collapsed: false
