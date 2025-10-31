@@ -32,7 +32,7 @@ vercel 免费提供部署静态网站和Serverless Functions 服务。但是 ver
 
 ## 使用 vercel 部署 node 服务
 
-1. 进入到项目中，点击右上角的 `add new.. --> project` 选择 `express.js on vercel` 模版进行创建项目，绑定到自己的 github 仓库中。
+1. 进入到项目中，点击右上角的 `add new.. --> project` 选择 [express.js on vercel](https://vercel.com/new/clone?demo-description=Simple%20Express.js%20%2B%20Vercel%20example%20that%20serves%20html%20content%2C%20JSON%20data%20and%20simulates%20an%20API%20route.&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2FswUZt4R6yxCjtb5PaoSMT%2F250fb904d33f82b2b96769b964d7848b%2FFlagsmith_Dark__1_.png&demo-title=Express.js%20on%20Vercel&demo-url=https%3A%2F%2Fexpress-vercel-example-demo.vercel.app&from=templates&project-name=Express.js%20on%20Vercel&repository-name=express-js-on-vercel&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fsolutions%2Fexpress&skippable-integrations=1&teamSlug=sleepysheeps-projects) 模版进行创建项目，绑定到自己的 github 仓库中。
 
 2. 使用 git clone 到本地，并安装依赖。
 
@@ -60,6 +60,8 @@ vercel dev
 
 调试好代码后提交到 github 仓库中，vercel 会自动部署服务。
 
+![image.png](./image.png)
+
 :::warning 注意
 这里有几个坑需要注意：
 1. vercel 环境与普通 node 环境有所不同，无法直接移植运行一般的 express 项目。代码会略有不同，例如，vercel 会自动分配端口，不需要使用 listen 方法监听端口。详细的差异请参考 [官方文档](https://vercel.com/docs/frameworks/backend/express)
@@ -75,3 +77,5 @@ vercel 部署服务默认提供的域名在国内无法访问，需要更换自�
 2. 在域名的 DNS 服务商中添加 `xxx.xxx.com` 的解析记录，解析记录的 ip 地址为 `xx.xx.xx.xx`。
 
 3. 回到 vercel 项目 `settings--> Domains` 中查看域名解析生效后即可通过 `xxx.xxx.com` 访问服务。
+
+![image%20copy.png](./image%20copy.png)
