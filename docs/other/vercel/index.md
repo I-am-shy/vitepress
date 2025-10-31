@@ -25,7 +25,7 @@ During development, Vercel provides tools for real-time collaboration on your pr
 
 :::
 
-:::tips 说明
+:::tip 说明
 vercel 免费提供部署静态网站和Serverless Functions 服务。但是 vercel 的部署服务默认提供的域名在国内无法访问，需要更换自己的域名来访问服务。
 
 :::
