@@ -124,6 +124,15 @@ export default defineConfig({
           { text: "vscode用户代码片段", link: "/vscodeExtensions/userCode" }
         ],
         collapsed: false
+      },{
+        text: "git",
+        items: [
+          { text: "常用的git命令", link: "/git/" },
+          { text: "git修改pr", link: "/git/pr" },
+          { text: "git配置", link: "/git/config" },
+          { text: "git恢复已删除的分支（文件变更）", link: "/git/reflog" },
+        ],
+        collapsed: false
       },
       {
         text: "docker",
@@ -147,9 +156,6 @@ export default defineConfig({
         text: "其他",
         items: [
           { text: "YAML", link: "/other/yaml/" },
-          { text: "常用的git命令", link: "/other/git/" },
-          { text: "git修改pr", link: "/other/git/pr" },
-          { text: "git配置", link: "/other/git/config" },
           { text: "常用的unix命令", link: "/other/unix/" },
           { text: "XPath", link: "/other/xPath/" },
           { text: "wireguard", link:"/other/wireguard/"},

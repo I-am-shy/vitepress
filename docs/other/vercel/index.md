@@ -1,6 +1,6 @@
 # vercel 部署 node 服务和解决 vercel 不可访问的问题
 
-:::danger 前言
+:::tip 前言
 本文假定你已具备以下条件：
 - 掌握 node 基础知识
 - 拥有 github 账号并掌握 git 基础知识
