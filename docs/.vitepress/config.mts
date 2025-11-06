@@ -131,6 +131,7 @@ export default defineConfig({
           { text: "git修改pr", link: "/git/pr" },
           { text: "git配置", link: "/git/config" },
           { text: "git恢复已删除的分支（文件变更）", link: "/git/reflog" },
+          { text: "git提交指定commit", link: "/git/cherry-pick" },
         ],
         collapsed: false
       },
