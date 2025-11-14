@@ -124,7 +124,15 @@ export default defineConfig({
           { text: "vscode用户代码片段", link: "/vscodeExtensions/userCode" }
         ],
         collapsed: false
-      },{
+      },
+      {
+        text: "浏览器扩展",
+        items: [
+          { text: "chrome 浏览器扩展", link: "/chromeExtensions/" },
+        ],
+        collapsed: false
+      },
+      {
         text: "git",
         items: [
           { text: "常用的git命令", link: "/git/" },
@@ -159,7 +167,7 @@ export default defineConfig({
           { text: "YAML", link: "/other/yaml/" },
           { text: "常用的unix命令", link: "/other/unix/" },
           { text: "XPath", link: "/other/xPath/" },
-          { text: "wireguard", link:"/other/wireguard/"},
+          { text: "wireguard", link: "/other/wireguard/" },
           { text: "clash", link: "/other/clash/" },
           { text: "vercel", link: "/other/vercel/" },
           { text: "更多", link: "/other/more/" }
@@ -203,7 +211,7 @@ export default defineConfig({
       // }
     },
     optimizeDeps: {
-      include: ['monaco-editor',"mermaid"], // 优化依赖
+      include: ['monaco-editor', "mermaid"], // 优化依赖
     },
     ssr: {
       // noExternal: ['monaco-editor',"mermaid"]
@@ -212,7 +220,7 @@ export default defineConfig({
   sitemap: {
     hostname: "https://i-am-shy.github.io/vitepress/"
   },
-  markdown:{
+  markdown: {
     config: (md) => {
       md.use(MermaidMarkdown); // 添加 Mermaid 支持
     }
