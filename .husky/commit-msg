@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+echo "🔍 运行 commitlint 检查..."
+npm run commitlint
+RESULT=$?
+
+if [ $RESULT -ne 0 ] ; then
+  echo "❌ 由于 commitlint 错误，提交被中止。"
+  exit 1
+fi
+
+echo "✅ commitlint 检查通过，继续提交。"
+exit 0
