@@ -93,6 +93,7 @@ export default defineConfig({
               { text: "robotjs", link: "/JS/lib/Robotjs/" },
               { text: "Monaco Editor", link: "/JS/lib/Monaco/" },
               { text: "highlight.js", link: "/JS/lib/hljs/" },
+              { text: "redis", link: "/JS/lib/redis/" },
             ],
             collapsed: false
           },
