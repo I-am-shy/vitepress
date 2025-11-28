@@ -130,7 +130,12 @@ var fs   = require('fs');
 
 var obj = {
   title: '这是一个yaml文件',
-  list: ['列表项1', '列表项2', '列表项3']
+  list: ['列表项1', '列表项2', '列表项3'],
+  listMap: [
+    {key:"_1", value:1},
+    {key:"_2", value:2},
+    {key:"_3", value:3},
+  ]
 };
 
 try {
@@ -150,6 +155,13 @@ list:
   - 列表项1
   - 列表项2
   - 列表项3
+listMap:
+  - key: _1
+    value: 1
+  - key: _2
+    value: 2
+  - key: _3
+    value: 3
 ```
 
 :::warning 注意

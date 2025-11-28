@@ -166,6 +166,7 @@ export default defineConfig({
         text: "其他",
         items: [
           { text: "YAML", link: "/other/yaml/" },
+          { text: "XML", link: "/other/xml/" },
           { text: "常用的unix命令", link: "/other/unix/" },
           { text: "XPath", link: "/other/xPath/" },
           { text: "wireguard", link: "/other/wireguard/" },
