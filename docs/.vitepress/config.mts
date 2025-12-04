@@ -94,6 +94,7 @@ export default defineConfig({
               { text: "Monaco Editor", link: "/JS/lib/Monaco/" },
               { text: "highlight.js", link: "/JS/lib/hljs/" },
               { text: "redis", link: "/JS/lib/redis/" },
+              { text: "socket.io", link: "/JS/lib/socketio/" },
             ],
             collapsed: false
           },
