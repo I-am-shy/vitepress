@@ -78,7 +78,7 @@ function createLoadingAnimation(options = {}) {
 
 ---
 
-## HTML Table to MD Table
+## HTML 表格到 MD 表格
 
 ```ts
 function convertHtmlTableToMarkdown(htmlTable: string) {
@@ -122,6 +122,8 @@ function convertHtmlTableToMarkdown(htmlTable: string) {
 }
 ```
 
+---
+
 ## VSCode extension 获取选中文本
 
 ```ts
@@ -132,10 +134,88 @@ const selectedText = editor.document.getText(selection);
 
 ```
 
+---
+
 ## 线程休眠函数(Sleep)
 
 ```js
+// 利用事件循环机制实现休眠
 function Sleep(time){
   return new Promise(resolve => setTimeout(resolve, time))
+}
+```
+
+---
+
+## 颜色输出
+
+```js
+
+function colorLog(color = "default", message = "") {
+  const colors = {
+    default: '\x1b[0m', // 默认颜色
+    red: '\x1b[31m',
+    green: '\x1b[32m',
+    yellow: '\x1b[33m',
+    blue: '\x1b[34m',
+    cyan: '\x1b[36m',
+    gray: '\x1b[90m'
+  };
+
+  console.log(`${colors[color]}${message}${colors.default}`);
+}
+```
+
+---
+
+## 解析命令行参数
+
+```js
+// 解析命令行参数
+// 例如：node script.js -v --help
+function parseArgs() {
+  // process.argv : [node, script.js, -v, --help]
+  const args = process.argv.slice(2);
+  const options = {
+    version: false,
+    help: false,
+  };
+
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i];
+    switch (arg) {
+      case '-v':
+        options.version = true;
+        break;
+      case '--help':
+      case '-h':
+        options.help = true;
+        break;
+    }
+  }
+
+  return options;
+}
+
+```
+
+## 进度条显示
+
+```js
+/**
+ * 创建进度条
+ * @param {number} current 当前进度
+ * @param {number} total 总进度
+ * @param {number} barLength 进度条长度
+ * @returns {string} 进度条字符串
+ */
+function createProgressBar(current=0, total=1, barLength = 30) {
+  if(current > total){
+    return `[${'█'.repeat(barLength)}] ${Math.floor((current / total) * 100)}% (${current}/${total})`;
+  }
+  const percentage = Math.round((current / total) * 100);
+  const filledLength = Math.round((current / total) * barLength);
+  const bar = '█'.repeat(filledLength) + '░'.repeat(barLength - filledLength);
+  return `[${bar}] ${percentage}% (${current}/${total})`;
 }
 ```
