@@ -37,16 +37,16 @@ export default defineConfig({
               {
                 text: "Samples",
                 items: [
-                  { text: "实现拍摄和录屏功能", link: "/JS/native/Video/" },
-                  { text: "Stream 流", link: "/JS/native/Stream/" },
-                  { text: "执行终端命令", link: "/JS/native/exec/" },
-                  { text: "实现终端流式输出", link: "/JS/native/console/" },
-                  { text: "自定义事件", link: "/JS/native/event/" },
-                  { text: "长轮询 和 SSE", link: "/JS/native/sse/" },
+                  { text: "实现拍摄和录屏功能", link: "/js/native/video/" },
+                  { text: "Stream 流", link: "/js/native/stream/" },
+                  { text: "执行终端命令", link: "/js/native/exec/" },
+                  { text: "实现终端流式输出", link: "/js/native/console/" },
+                  { text: "自定义事件", link: "/js/native/event/" },
+                  { text: "长轮询 和 SSE", link: "/js/native/sse/" },
                 ],
                 collapsed: true
               },
-              { text: "JS(TS) 代码片段", link: "/JS/native/script/" },
+              { text: "JS(TS) 代码片段", link: "/js/native/script/" },
             ],
             collapsed: false
           },
@@ -56,57 +56,57 @@ export default defineConfig({
               {
                 text: "js动画库",
                 items: [
-                  { text: "popmotion", link: "/JS/lib/Animation/" }
+                  { text: "popmotion", link: "/js/lib/animation/" }
                 ],
                 collapsed: true
               },
               {
                 text: "ThreeJS 3D模型",
                 items: [
-                  { text: "基本概念", link: "/JS/lib/ThreeJS/" },
-                  { text: "初始化场景模型", link: "/JS/lib/ThreeJS/init" },
-                  { text: "第一个3D场景模型", link: "/JS/lib/ThreeJS/scene" },
-                  { text: "几何矩阵", link: "/JS/lib/ThreeJS/geometry" },
-                  { text: "ThreeJS 示例", link: "/JS/lib/ThreeJS/example" },
+                  { text: "基本概念", link: "/js/lib/threejs/" },
+                  { text: "初始化场景模型", link: "/js/lib/threejs/init" },
+                  { text: "第一个3D场景模型", link: "/js/lib/threejs/scene" },
+                  { text: "几何矩阵", link: "/js/lib/threejs/geometry" },
+                  { text: "ThreeJS 示例", link: "/js/lib/threejs/example" },
                 ],
                 collapsed: true
               },
               {
                 text: "Express",
                 items: [
-                  { text: "express 框架", link: "/JS/lib/Express/" },
-                  { text: "express 命令行工具", link: "/JS/lib/Express/express-server" },
+                  { text: "express 框架", link: "/js/lib/express/" },
+                  { text: "express 命令行工具", link: "/js/lib/express/express-server" },
                 ],
                 collapsed: true
               },
               {
                 text: "js爬虫", items: [
-                  { text: "爬虫示例", link: "/JS/lib/Clawler/" },
-                  { text: "puppeteer", link: "/JS/lib/Clawler/puppeteer" },
-                  { text: "puppeteer 和浏览器自动化", link: "/JS/lib/Clawler/auto-page" },
+                  { text: "爬虫示例", link: "/js/lib/clawler/" },
+                  { text: "puppeteer", link: "/js/lib/clawler/puppeteer" },
+                  { text: "puppeteer 和浏览器自动化", link: "/js/lib/clawler/auto-page" },
                 ],
                 collapsed: true
               },
-              { text: "http-server", link: "/JS/lib/http-server/" },
-              { text: "html转markdown", link: "/JS/lib/Turndown/" },
-              { text: "2d物理引擎", link: "/JS/lib/Matter/" },
-              { text: "robotjs", link: "/JS/lib/Robotjs/" },
-              { text: "Monaco Editor", link: "/JS/lib/Monaco/" },
-              { text: "highlight.js", link: "/JS/lib/hljs/" },
-              { text: "redis", link: "/JS/lib/redis/" },
-              { text: "socket.io", link: "/JS/lib/socketio/" },
+              { text: "http-server", link: "/js/lib/http-server/" },
+              { text: "html转markdown", link: "/js/lib/turndown/" },
+              { text: "2d物理引擎", link: "/js/lib/matter/" },
+              { text: "robotjs", link: "/js/lib/robotjs/" },
+              { text: "Monaco Editor", link: "/js/lib/monaco/" },
+              { text: "highlight.js", link: "/js/lib/hljs/" },
+              { text: "redis", link: "/js/lib/redis/" },
+              { text: "socket.io", link: "/js/lib/socketio/" },
             ],
             collapsed: false
           },
-          { text: "Deno", link: "/JS/Deno/" },
+          { text: "Deno", link: "/js/deno/" },
         ],
         collapsed: false
       },
       {
         text: "TS",
         items: [
-          { text: "在任意位置运行ts", link: "/TS/run-TS/" },
-          { text: "TS 类型工具", link: "/TS/type-tools/" },
+          { text: "在任意位置运行ts", link: "/ts/run-ts/" },
+          { text: "TS 类型工具", link: "/ts/type-tools/" },
         ],
         collapsed: false
       },
@@ -121,16 +121,16 @@ export default defineConfig({
       {
         text: "vscode插件",
         items: [
-          { text: "vscode插件开发", link: "/vscodeExtensions/" },
-          { text: "vscode文本编辑API", link: "/vscodeExtensions/textEditor" },
-          { text: "vscode用户代码片段", link: "/vscodeExtensions/userCode" }
+          { text: "vscode插件开发", link: "/vscode-extensions/" },
+          { text: "vscode文本编辑API", link: "/vscode-extensions/text-editor" },
+          { text: "vscode用户代码片段", link: "/vscode-extensions/user-code" }
         ],
         collapsed: false
       },
       {
         text: "浏览器扩展",
         items: [
-          { text: "chrome 浏览器扩展", link: "/chromeExtensions/" },
+          { text: "chrome 浏览器扩展", link: "/chrome-extensions/" },
         ],
         collapsed: false
       },
@@ -158,9 +158,9 @@ export default defineConfig({
       {
         text: "AI",
         items: [
-          { text: "AI 相关概念", link: "/AI/" },
-          { text: "函数（工具）调用", link: "/AI/function-calling/" },
-          { text: "MCP 工具", link: "/AI/mcp-server/" },
+          { text: "AI 相关概念", link: "/ai/" },
+          { text: "函数（工具）调用", link: "/ai/function-calling/" },
+          { text: "MCP 工具", link: "/ai/mcp-server/" },
         ],
         collapsed: false
       },
@@ -170,7 +170,7 @@ export default defineConfig({
           { text: "YAML", link: "/other/yaml/" },
           { text: "XML", link: "/other/xml/" },
           { text: "常用的unix命令", link: "/other/unix/" },
-          { text: "XPath", link: "/other/xPath/" },
+          { text: "XPath", link: "/other/x-path/" },
           { text: "wireguard", link: "/other/wireguard/" },
           { text: "clash", link: "/other/clash/" },
           { text: "vercel", link: "/other/vercel/" },
@@ -181,7 +181,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/I-am-shy/vitepress' }
+      { icon: 'github', link: 'https://github.com/i-am-shy/vitepress' }
     ],
 
     search: {
