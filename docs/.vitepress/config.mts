@@ -143,6 +143,7 @@ export default defineConfig({
           { text: "git 恢复已删除的分支（文件变更）", link: "/git/reflog" },
           { text: "git 提交指定 commit", link: "/git/cherry-pick" },
           { text: "git hooks", link: "/git/githooks" },
+          { text: "git 大小写更改的提交问题", link: "/git/case" },
         ],
         collapsed: false
       },
