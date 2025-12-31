@@ -40,7 +40,7 @@ SSE（Server-Sent Events） 和长轮询（long polling）都是用于实现服�
     - 仅传输文本数据：如 JSON 格式的消息、文本日志等（无需二进制）。
 
 ## 示例代码
-以下示例代码使用 [express](../../lib/Express/index.md) 实现。
+以下示例代码使用 [express](../../lib/express/index.md) 实现。
 
 ### 长轮询示例
 
