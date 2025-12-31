@@ -54,18 +54,18 @@ export default defineConfig({
             text: "js lib",
             items: [
               {
-                text: "js动画库",
+                text: "js 动画库",
                 items: [
                   { text: "popmotion", link: "/js/lib/animation/" }
                 ],
                 collapsed: true
               },
               {
-                text: "ThreeJS 3D模型",
+                text: "ThreeJS 3D 模型",
                 items: [
                   { text: "基本概念", link: "/js/lib/threejs/" },
                   { text: "初始化场景模型", link: "/js/lib/threejs/init" },
-                  { text: "第一个3D场景模型", link: "/js/lib/threejs/scene" },
+                  { text: "第一个 3D 场景模型", link: "/js/lib/threejs/scene" },
                   { text: "几何矩阵", link: "/js/lib/threejs/geometry" },
                   { text: "ThreeJS 示例", link: "/js/lib/threejs/example" },
                 ],
@@ -89,7 +89,7 @@ export default defineConfig({
               },
               { text: "http-server", link: "/js/lib/http-server/" },
               { text: "html转markdown", link: "/js/lib/turndown/" },
-              { text: "2d物理引擎", link: "/js/lib/matter/" },
+              { text: "2d 物理引擎", link: "/js/lib/matter/" },
               { text: "robotjs", link: "/js/lib/robotjs/" },
               { text: "Monaco Editor", link: "/js/lib/monaco/" },
               { text: "highlight.js", link: "/js/lib/hljs/" },
@@ -105,7 +105,7 @@ export default defineConfig({
       {
         text: "TS",
         items: [
-          { text: "在任意位置运行ts", link: "/ts/run-ts/" },
+          { text: "在任意位置运行 ts", link: "/ts/run-ts/" },
           { text: "TS 类型工具", link: "/ts/type-tools/" },
         ],
         collapsed: false
@@ -114,16 +114,16 @@ export default defineConfig({
         text: "npm",
         items: [
           { text: "npm", link: "/npm/" },
-          { text: "npm发布包", link: "/npm/publish" },
+          { text: "npm 发布包", link: "/npm/publish" },
         ],
         collapsed: false
       },
       {
         text: "vscode插件",
         items: [
-          { text: "vscode插件开发", link: "/vscode-extensions/" },
-          { text: "vscode文本编辑API", link: "/vscode-extensions/text-editor" },
-          { text: "vscode用户代码片段", link: "/vscode-extensions/user-code" }
+          { text: "vscode 插件开发", link: "/vscode-extensions/" },
+          { text: "vscode 文本编辑 API", link: "/vscode-extensions/text-editor" },
+          { text: "vscode 用户代码片段", link: "/vscode-extensions/user-code" }
         ],
         collapsed: false
       },
@@ -137,21 +137,30 @@ export default defineConfig({
       {
         text: "git",
         items: [
-          { text: "常用的git命令", link: "/git/" },
-          { text: "git修改pr", link: "/git/pr" },
-          { text: "git配置", link: "/git/config" },
-          { text: "git恢复已删除的分支（文件变更）", link: "/git/reflog" },
-          { text: "git提交指定commit", link: "/git/cherry-pick" },
+          { text: "常用的 git 命令", link: "/git/" },
+          { text: "git 修改 pr", link: "/git/pr" },
+          { text: "git 配置", link: "/git/config" },
+          { text: "git 恢复已删除的分支（文件变更）", link: "/git/reflog" },
+          { text: "git 提交指定 commit", link: "/git/cherry-pick" },
           { text: "git hooks", link: "/git/githooks" },
+        ],
+        collapsed: false
+      },
+      {
+        text: "Terminal",
+        items: [
+          { text: "unix 命令", link: "/terminal/unix/" },
+          { text: "vim 编辑器", link: "/terminal/vim/" },
+          { text: "shell 脚本", link: "/terminal/shell/" },
         ],
         collapsed: false
       },
       {
         text: "docker",
         items: [
-          { text: "docker安装", link: "/docker/" },
-          { text: "docker基本命令", link: "/docker/command" },
-          { text: "docker打包网页", link: "/docker/build" },
+          { text: "docker 安装", link: "/docker/" },
+          { text: "docker 基本命令", link: "/docker/command" },
+          { text: "docker 打包网页", link: "/docker/build" },
         ],
         collapsed: false
       },
@@ -159,8 +168,8 @@ export default defineConfig({
         text: "AI",
         items: [
           { text: "AI 相关概念", link: "/ai/" },
-          { text: "函数（工具）调用", link: "/ai/function-calling/" },
-          { text: "MCP 工具", link: "/ai/mcp-server/" },
+          { text: "函数（工具）调用", link: "/ai/function-calling" },
+          { text: "MCP 工具", link: "/ai/mcp-server" },
         ],
         collapsed: false
       },
@@ -169,7 +178,6 @@ export default defineConfig({
         items: [
           { text: "YAML", link: "/other/yaml/" },
           { text: "XML", link: "/other/xml/" },
-          { text: "常用的unix命令", link: "/other/unix/" },
           { text: "XPath", link: "/other/x-path/" },
           { text: "wireguard", link: "/other/wireguard/" },
           { text: "clash", link: "/other/clash/" },
