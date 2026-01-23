@@ -183,6 +183,7 @@ export default defineConfig({
           { text: "wireguard", link: "/other/wireguard/" },
           { text: "clash", link: "/other/clash/" },
           { text: "vercel", link: "/other/vercel/" },
+          { text: "正则表达式", link: "/other/regular/" },
           { text: "更多", link: "/other/more/" }
         ],
         collapsed: false
