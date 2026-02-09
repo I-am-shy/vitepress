@@ -95,6 +95,8 @@ export default defineConfig({
               { text: "highlight.js", link: "/js/lib/hljs/" },
               { text: "redis", link: "/js/lib/redis/" },
               { text: "socket.io", link: "/js/lib/socketio/" },
+              { text: "ora", link: "/js/lib/ora/" },
+              { text: "chalk", link: "/js/lib/chalk/" },
             ],
             collapsed: false
           },
