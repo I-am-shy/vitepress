@@ -97,6 +97,7 @@ export default defineConfig({
               { text: "socket.io", link: "/js/lib/socketio/" },
               { text: "ora", link: "/js/lib/ora/" },
               { text: "chalk", link: "/js/lib/chalk/" },
+              { text: "inquirer", link: "/js/lib/inquirer/" },
             ],
             collapsed: false
           },
@@ -239,6 +240,7 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       md.use(MermaidMarkdown); // 添加 Mermaid 支持
-    }
+    },
+    // lineNumbers: true // 代码块显示行号
   }
 });
