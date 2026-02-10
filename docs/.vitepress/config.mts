@@ -34,19 +34,13 @@ export default defineConfig({
           {
             text: "js native",
             items: [
-              {
-                text: "Samples",
-                items: [
-                  { text: "实现拍摄和录屏功能", link: "/js/native/video/" },
-                  { text: "Stream 流", link: "/js/native/stream/" },
-                  { text: "执行终端命令", link: "/js/native/exec/" },
-                  { text: "实现终端流式输出", link: "/js/native/console/" },
-                  { text: "自定义事件", link: "/js/native/event/" },
-                  { text: "长轮询 和 SSE", link: "/js/native/sse/" },
-                ],
-                collapsed: true
-              },
               { text: "JS(TS) 代码片段", link: "/js/native/script/" },
+              { text: "实现拍摄和录屏功能", link: "/js/native/video/" },
+              { text: "Stream 流", link: "/js/native/stream/" },
+              { text: "执行终端命令", link: "/js/native/exec/" },
+              { text: "实现终端流式输出", link: "/js/native/console/" },
+              { text: "自定义事件", link: "/js/native/event/" },
+              { text: "长轮询 和 SSE", link: "/js/native/sse/" },
             ],
             collapsed: false
           },
@@ -98,6 +92,7 @@ export default defineConfig({
               { text: "ora", link: "/js/lib/ora/" },
               { text: "chalk", link: "/js/lib/chalk/" },
               { text: "inquirer", link: "/js/lib/inquirer/" },
+              { text: "cfonts", link: "/js/lib/cfonts/" },
             ],
             collapsed: false
           },
