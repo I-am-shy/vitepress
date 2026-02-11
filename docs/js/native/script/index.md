@@ -76,7 +76,6 @@ function createLoadingAnimation(options = {}) {
 // }
 ```
 
----
 
 ## HTML 表格到 MD 表格
 
@@ -122,7 +121,6 @@ function convertHtmlTableToMarkdown(htmlTable: string) {
 }
 ```
 
----
 
 ## VSCode extension 获取选中文本
 
@@ -134,7 +132,6 @@ const selectedText = editor.document.getText(selection);
 
 ```
 
----
 
 ## 线程休眠函数(Sleep)
 
@@ -145,7 +142,6 @@ function Sleep(time){
 }
 ```
 
----
 
 ## 颜色输出
 
@@ -166,7 +162,6 @@ function colorLog(color = "default", message = "") {
 }
 ```
 
----
 
 ## 解析命令行参数
 
@@ -218,4 +213,22 @@ function createProgressBar(current=0, total=1, barLength = 30) {
   const bar = '█'.repeat(filledLength) + '░'.repeat(barLength - filledLength);
   return `[${bar}] ${percentage}% (${current}/${total})`;
 }
+```
+
+
+## 清空命令行
+
+```js
+/**
+ * 清屏函数
+ */
+function clearScreen() {
+  // 使用 ANSI 转义序列 (ANSI Escape Codes) 清空屏幕并移动光标至左上角
+  // \x1B (或 ESC)：表示转义字符（ASCII 27），标志着控制序列的开始。
+  // \x1B[2J：清空整个屏幕。
+  // \x1B[3J：删除回滚缓冲区中的内容（完全清除滚动条）。
+  // \x1B[H：将光标移动到屏幕左上角（Home 位置）。
+  // \x1B[0f：功能同上，将光标定位到原点
+  process.stdout.write(process.platform === 'win32' ? '\x1B[2J\x1B[0f' : '\x1B[2J\x1B[3J\x1B[H');
+};
 ```

@@ -32,7 +32,7 @@ export default defineConfig({
         text: "JS",
         items: [
           {
-            text: "js native",
+            text: "Native",
             items: [
               { text: "JS(TS) 代码片段", link: "/js/native/script/" },
               { text: "实现拍摄和录屏功能", link: "/js/native/video/" },
@@ -45,7 +45,7 @@ export default defineConfig({
             collapsed: false
           },
           {
-            text: "js lib",
+            text: "Lib",
             items: [
               {
                 text: "js 动画库",
@@ -97,6 +97,7 @@ export default defineConfig({
             collapsed: false
           },
           { text: "Deno", link: "/js/deno/" },
+          { text: "Bun", link: "/js/bun/" },
         ],
         collapsed: false
       },

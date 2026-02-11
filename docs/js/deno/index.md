@@ -1,32 +1,36 @@
-# Deno --- 下一代JavaScript和TypeScript运行时
----
-[Deno](https://deno.org.cn/)是基于V8引擎和Rust语言所建立的JavaScript、TypeScript、WebAssembly执行环境，由Node.js的原始开发者 瑞安·达尔 所创造，deno 这个名字就是来自 Node 的字母重新组合（Node = no + de），表示"拆除 Node.js"（de = destroy, no = Node.js）。
+# Deno 
 
-:::tip 与Node.js的比较:
+>[!NOTE] Deno 是现代网络的开源 JavaScript 运行时
+> **Deno is the open-source JavaScript runtime for the modern web**
 
-Deno与Node.js的相同之处：
+## 简介
+[Deno](https://deno.org.cn/) 是基于 V8 引擎和 Rust 语言所建立的 JavaScript、TypeScript、WebAssembly 执行环境，由 Node.js 的原始开发者 瑞安·达尔 所创造，deno 这个名字就是来自 Node 的字母重新组合（Node = no + de），表示"拆除 Node.js"（de = destroy, no = Node.js）。
+
+:::details 与 Node.js 的比较:
+
+**Deno 与 Node.js的相同之处**：
 
 - 皆运行于V8上。
 - 拥有相同的事件循环。
 - 提供CLI让用户可以执行脚本语言。
 
-Deno与Node.js的不同之处：
+**Deno与Node.js的不同之处**：
 
 - 默认模块系统是使用ES Module，而不是CommonJS。
 - 使用URL加载本地端或远程的dependencies,可以直接导入或者运行远端脚本
 
-```bash
-deno run https://deno.land/std/examples/welcome.ts
-```
----
-```js
-import { serve } from "https://deno.land/std@0.121.0/http/server.ts";
-```
-- 不同于nodejs，deno的包管理器是内置的，不需要使用npm（没有node，npm之分）。
+    ```bash
+    deno run https://deno.land/std/examples/welcome.ts
+    ```
+
+    ```js
+    import { serve } from "https://deno.land/std@0.121.0/http/server.ts";
+    ```
+- 不同于 Node.js，Deno 的包管理器是内置的，不需要使用 npm（没有 Node.js 和 npm 之分）。
 - 内置支持 TypeScript，开箱即用。
 - 允许控制文件系统与网络访问，防止程序拥有过多的权限。
-- 重新利用Promise、ES6、Typescript来设计API。
-- 使用deno.json文件来配置项目。
+- 重新利用 Promise、ES6、TypeScript 来设计 API。
+- 使用 deno.json 文件来配置项目。
 :::
 
 ## 安装
@@ -47,7 +51,7 @@ brew install deno
 deno init my_project
 ```
 
-这将创建一个名为 my_project 的新目录，包含以下结构
+这将创建一个名为 `my_project` 的新目录，包含以下结构
 
 ```
 my_project
@@ -64,7 +68,7 @@ deno run main.ts
 
 ## 兼容nodejs
 
-可以在deno中使用nodejs包和内置API，同样支持cjs模块;使用`node:`,和`npm:`前缀标记
+可以在 Deno 中使用 Node.js 包和内置 API，同样支持 cjs 模块;使用 `node:`,和 `npm:` 前缀标记
 
 ```js
 import * as fs from "node:fs";
@@ -73,8 +77,8 @@ import * as fs from "node:fs";
 import * as emoji from "npm:node-emoji";
 ```
 
-:::warning
-默认情况下，当你使用 deno run 命令时，Deno 不会创建 node_modules 目录，依赖项将被安装到全局缓存中。
+:::warning 注意
+默认情况下，当你使用 `deno run` 命令时，Deno 不会创建 `node_modules` 目录，依赖项将被安装到全局缓存中。
 :::
 
 ## 安全和权限
@@ -94,8 +98,8 @@ Deno 提供了多种权限控制选项，以确保您的代码在安全的环境
 `--allow-sys`
 
 
-:::warning
-`--allow-all`,`-A` 是允许所有权限，此时等同于一般的node命令
+:::warning 注意 
+`--allow-all`,`-A` 是允许所有权限，此时等同于一般的 node 命令
 ```bash
 deno run --allow-all index.js
 node index.js
