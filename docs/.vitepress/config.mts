@@ -170,6 +170,7 @@ export default defineConfig({
           { text: "AI 相关概念", link: "/ai/" },
           { text: "函数（工具）调用", link: "/ai/function-calling" },
           { text: "MCP 工具", link: "/ai/mcp-server" },
+          { text: "Claude Code", link: "/ai/claude-code" },
         ],
         collapsed: false
       },

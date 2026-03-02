@@ -6,6 +6,7 @@
 
 ## 安装
 
+:::code-group
 ```bash [npm]
 npm install @inquirer/prompts
 ```
@@ -15,6 +16,7 @@ pnpm add @inquirer/prompts
 ```bash [bun]
 bun add @inquirer/prompts
 ```
+:::
 
 > [!TIP] 说明
 >  `@inquirer/prompts` 是 inquirer 的重置后的包，它包含了 inquirer 的所有功能，并且语法更加简洁包体积更小。
