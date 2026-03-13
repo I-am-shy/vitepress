@@ -100,7 +100,9 @@ echo $PATH
 5. 最后重新打开终端生效
 
 
-## mac 查看ip
+## 查看设备 ip 地址
+
+**mac/linux**:
 ```bash
 #查看ip完整信息
 ifconfig 
@@ -108,3 +110,80 @@ ifconfig
 #查看en0 接口的 IP 地址（通常是 Wi-Fi 接口）
 ipconfig getifaddr en0
 ```
+
+**windows**:
+```bash
+ipconfig
+```
+## 解除端口占用
+
+**mac/linux**:
+
+```bash
+# 查看端口的进程信息，找到对应的进程id，然后使用 kill 命令杀死进程
+lsof -i:<端口号>
+
+kill -9 <进程pid>
+```
+
+**window(powershell)**:
+```powershell
+# 查看端口的进程信息，找到对应的进程id，然后使用 kill 命令杀死进程
+netstat -aon | findstr <端口号>
+
+kill <进程pid>
+```
+
+## 管道符 `|`
+
+管道符 `|` 用于将一个命令的输出作为另一个命令的输入。
+
+**基本使用**： `命令A | 命令B`
+
+```bash
+# 查找包含nginx的进程
+ps aux | grep "nginx" 
+# 统计当前目录下文件和目录数
+ls -l | wc -l 
+# 排序并去重
+cat file.txt | sort | uniq 
+# 分页查看
+cat long_file.txt | less 
+```
+
+
+> [!NOTE] 注意
+> - 管道只处理前一个命令的标准输出（Stdout），不处理标准错误（Stderr）。
+> - 若需处理标准错误，可使用 `|&`。
+> - 部分命令（如 rm, cat）不支持管道直接传递参数，需配合 `xargs` 使用。
+
+
+### 管道符参数化
+
+`xargs` 用于将管道符的输出作为另一个命令的输入，并将其参数化。
+
+- `-n` 参数：指定每个命令的参数数量。
+- `-I` 参数：指定一个字符串，用于替换每个命令的参数，默认为 `{}`。
+
+
+```bash
+# 
+cat file.txt | xargs echo
+```
+
+**使用示例**
+
+- 批量删除文件
+```bash
+find . -name "*.tmp" | xargs rm -f
+```
+
+- 处理带空格的文件名
+```bash
+find . -name "*.txt" -print0 | xargs -0 rm
+```
+
+### 区分 `｜` 和 `| xargs`
+
+- 直接用管道 `|`：传递输入、输出流（stdin、stdout）。相当于你把纸条塞进碎纸机，如果后一个命令不支持 stdin，它会直接忽略这张纸。
+- 配合 `xargs`：传递 命令行参数 (Arguments)，泛用性更强。相当于你把纸条上的文字读出来，作为指令传达。
