@@ -73,4 +73,4 @@ ghPages
 
 > [!NOTE] 其他部署方式
 >
->除了使用 gh-pages 部署静态网站外，还可以使用 [Github Actions](./github-actions/index.md) 部署静态网站。
+>除了使用 gh-pages 部署静态网站外，还可以使用 [Github Actions](../github-actions/index.md) 部署静态网站。
