@@ -121,13 +121,57 @@ claude mcp add-json <name> <xxx.json>
 }
 ```
 
-### 注册 Plugin 插件
-
-持续更新中...
-
 ### 使用 Skills 技能
 
-持续更新中...
+Claude Code 支持使用 Skills 技能，可以扩展 Claude Code 的功能。例如，指定某个任务如何处理，嵌入脚本，运行指定命令，调用外部工具等。
+
+Skill 是一个包含 SKILL.md 文件的目录，一个 Skill 包含以下内容：
+
+```bash
+my-skill/
+├── SKILL.md           # 入口说明（必需）
+├── template.md        # Claude 要填写的模板
+├── examples/
+│   └── sample.md      # 显示预期格式的示例输出
+├── scripts/
+│   └── validate.sh    # Claude 可以执行的脚本
+└── ...
+```
+SKILL.md 的格式如下
+
+```md
+---
+name: my-skill-name
+description: A clear description of what this skill does and when to use it
+---
+
+# My Skill Name
+
+[Add your instructions here that Claude will follow when this skill is active]
+
+## Examples
+- Example usage 1
+- Example usage 2
+
+## Guidelines
+- Guideline 1
+- Guideline 2
+```
+
+**skill 的作用范围**：
+skill 可以在全局或当前项目下注册使用。
+
+1. 全局注册：将 skill 的目录添加到 `~/.claude/skills` 目录下，claude code 会自动识别并加载。
+2. 项目注册：将 skill 的目录添加到项目根目录下的 `.claude/skills` 目录下，claude code 会自动识别并加载。
+
+**下载 skills**
+
+目前已有多个公共 skill 仓库，需要特定的 skill 时，可以从这些仓库中下载。
+
+- [Anthropics skills 仓库](https://github.com/anthropics/skills)
+- [Vercel skills](https://skills.sh/)
+- [ClawHub](https://clawhub.ai/)
+
 
 
 ## 参考
