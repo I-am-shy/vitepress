@@ -136,13 +136,14 @@ export default defineConfig({
       {
         text: "git",
         items: [
-          { text: "常用的 git 命令", link: "/git/" },
+          { text: "git 和 git 命令", link: "/git/" },
           { text: "git 修改 pr", link: "/git/pr" },
           { text: "git 配置", link: "/git/config" },
           { text: "git 恢复已删除的分支（文件变更）", link: "/git/reflog" },
           { text: "git 提交指定 commit", link: "/git/cherry-pick" },
           { text: "git hooks", link: "/git/githooks" },
           { text: "git 大小写更改的提交问题", link: "/git/case" },
+          { text: "git 远程仓库", link: "/git/remote" },
         ],
         collapsed: false
       },
