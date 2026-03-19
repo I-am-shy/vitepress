@@ -21,3 +21,12 @@ Function Calling （函数调用，工具调用）是大模型扩展出来的一
 ## Agent --- 智能体
 
 Agent 是基于 LLM 、具备 Function Calling 能力、遵守 MCP 协议的 AI 智能体，它能理解用户的自然语言，并根据用户的需求选择调用相应的工具，完成用户的任务（文本，行为）。Agent 能够不断循环输入、思考、行动、输出，直到完成用户任务。
+
+## Sub-Agent --- 子智能体
+
+Sub-Agent 是 Agent 的子集，当 Agent 需要处理特定类型任务时，可以将任务拆分为一个或多个并交给相关的 Sub-Agent 来处理。Sub-Agents 是处理特定类型任务的专门 AI 助手。每个 Sub-Agent 在自己的 context window 中运行，具有自定义系统提示、特定的工具访问权限和独立的权限。
+
+## Skills --- 技能
+
+Skills 是一种轻量级的开放格式，用于扩展 AI Agent 的功能。在任务处理中 Skills 指定了处理流程，以及额外的工具的调用（若有）。在处理某一类任务时，可以复用 Skills 标准化的完成任务。Skills 是渐进式的，只有需要使用到 Skills 时才会进入到模型的上下文中。
+
