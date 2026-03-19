@@ -93,6 +93,8 @@ export default defineConfig({
               { text: "chalk", link: "/js/lib/chalk/" },
               { text: "inquirer", link: "/js/lib/inquirer/" },
               { text: "cfonts", link: "/js/lib/cfonts/" },
+              { text: "hono", link: "/js/lib/hono/" },
+              { text: "pm2", link: "/js/lib/pm2/" },
             ],
             collapsed: false
           },
