@@ -1,8 +1,8 @@
-# js动画库 popmotion
+# popmotion
 
 
 ## 简介
-[popmotion](https://github.com/Popmotion/popmotion#the-animators-toolbox)是：
+[popmotion](https://github.com/Popmotion/popmotion#the-animators-toolbox)是一个 JavaScript 的动画库，它有以下特点：
 
 - 功能强大：支持数字、颜色和复杂字符串的关键帧和弹簧动画。
 - 低级：它被设计为可组合和可移植到任何 JavaScript 环境中，并着眼于未来的 Worklets。

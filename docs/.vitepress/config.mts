@@ -25,7 +25,7 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '前端开发能力',
+        text: '开发能力',
         link: '/target'
       },
       {
@@ -50,7 +50,8 @@ export default defineConfig({
               {
                 text: "js 动画库",
                 items: [
-                  { text: "popmotion", link: "/js/lib/animation/" }
+                  { text: "popmotion", link: "/js/lib/animation/" },
+                  { text: "gsap", link: "/js/lib/animation/gsap" },
                 ],
                 collapsed: true
               },
