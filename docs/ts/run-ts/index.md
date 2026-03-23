@@ -1,35 +1,37 @@
-# 在任意位置运行ts
+# 在任意位置运行 ts
 
 
 ## 前言
-在开发过程中，调试运行ts文件，通常需要在大型框架下启动运行；有时只是想测试一下简单的ts代码，启动大型框架显得有些繁琐，因此需要一种简单的方式运行ts代码。
+
+在开发过程中，调试运行 ts 文件，通常需要在大型框架下启动运行；有时只是想测试一下简单的 ts 代码，启动大型框架显得有些繁琐，因此需要一种简单的方式运行 ts 代码。
 
 ## 解决方案
 
-1. 使用tsc编译ts文件，然后使用node运行编译后的js文件
-2. 使用ts-node直接运行ts文件
+1. 使用 tsc 编译 ts 文件，然后使用 node 运行编译后的 js 文件
+2. 使用 ts-node 直接运行 ts 文件
+3. **使用 tsx 或 bun 直接运行 ts 文件（推荐，零配置）**
 
-### tsc编译ts文件
+### tsc 编译 ts 
 
-首先需要先全局安装typescript
+首先需要先全局安装 typescript
 
 ```bash
 npm install -g typescript
 ```
 
-然后使用tsc编译目录下的ts文件
+然后使用 tsc 编译目录下的 ts 文件
 
 ```bash
 tsc xxx.ts
 ```
 
-编译完成后，会生成一个同名的js文件，然后使用node运行js文件即可
+编译完成后，会生成一个同名的 js 文件，然后使用 node 运行 js 文件即可
 
 ```bash
 node xxx.js
 ```
 
-### ts-node直接运行ts文件
+### ts-node 运行 ts
 
 同样的需要全局安装typescript，另外还需要全局安装ts-node
 ```bash
@@ -42,16 +44,33 @@ npm install -g typescript ts-node
 tsc --init
 ```
 
-这个命令会在当前目录下生成一个tsconfig.json文件，然后根据tsconfig.json文件中的配置，编译ts文件
+这个命令会在当前目录下生成一个 tsconfig.json 文件，然后根据 tsconfig.json 文件中的配置，编译 ts 文件
 
-最后使用ts-node运行ts文件即可
+最后使用 ts-node 运行 ts 文件即可
 
 ```bash
 ts-node xxx.ts
 ```
 
+
+### tsx 或 bun 运行 ts 
+
+tsx 和 bun 是两个可以直接运行 ts 文件的工具，它们都支持零配置，直接运行 ts 文件即可。
+
+```bash
+npm install -g tsx 
+
+npm install -g bun
+```
+直接替换 node 命令即可运行 ts 文件。
+
+|命令｜node ｜tsx ｜bun ｜
+|---｜---｜---｜---｜
+|运行 ts 文件｜~~node xxx.js~~｜tsx xxx.ts｜bun xxx.ts｜
+|观察者模式运行 ts 文件｜~~node --watch xxx.ts~~｜tsx watch xxx.ts｜bun --watch xxx.ts｜
+
 ## 示例
-一个直接运行ts的示例
+使用 ts-node 运行 ts 。
 
 **目录结构**
 ```bash
@@ -85,10 +104,11 @@ console.log( pokers(ico,num))
 
 ```
 
-tsconfig.json中常用的几个字段有：
-- target：编译成哪个版本的js，例如这里的例子使用的ES2022,因为flaMap是比较新的方法，旧的版本不兼容，运行时会产生错误
-- module：编译成哪个模块化规范，commonjs,AMD,ES2022等,不过这里并不需要编译ts
-具体配置可以参考[官方文档](https://www.typescriptlang.org/tsconfig)
+tsconfig.json 中常用的几个字段有：
+- target：编译成哪个版本的js，例如这里的例子使用的 ES2022,因为 flaMap 是比较新的方法，旧的版本不兼容，运行时会产生错误。
+- module：编译成哪个模块化规范，commonjs,AMD,ES2022 等,不过这里并不需要编译 ts。
+
+具体配置可以参考[官方文档](https://www.typescriptlang.org/tsconfig)。
 
 :::details tsconfig.json
 ```json{2,14,28,81,83,86,109}
