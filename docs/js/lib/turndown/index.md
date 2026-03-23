@@ -1,11 +1,10 @@
-# HTML转Markdown
----
+# HTML 转 Markdown
 
-通过js将HTML转换为Markdown，使用[turndown](https://github.com/mixmark-io/turndown)库
+通过 js 将 HTML 转换为 Markdown，使用 [turndown](https://github.com/mixmark-io/turndown) 库
 
 ## 原理
 
-turndown库的原理是遍历匹配所有的HTML标签，然后根据默认或者设置好的规则将其转换为Markdown格式。
+turndown 库的原理是遍历匹配所有的 HTML 标签，然后根据默认或者设置好的规则将其转换为 Markdown 格式。
 
 ## 安装turndown
 npm
@@ -19,7 +18,7 @@ npm install turndown
 
 ## 基本使用方法
 
-在node环境下，通过Turndown实例的turndown方法将HTML格式的字符串文本转换为Markdown格式，需要注意的是，turndown库中也支持在html文本中使用选择器来获取标签内容
+在 node 环境下，通过 Turndown 实例的 `turndown` 方法将 HTML 格式的字符串文本转换为 Markdown 格式，需要注意的是，turndown 库中也支持在 html 文本中使用选择器来获取标签内容
 ```js
 // Node.js
 var TurndownService = require('turndown')
@@ -39,7 +38,7 @@ Turndown 也接受 DOM 节点作为输入（无论是元素节点、文档节点
 
 ## Options配置
 
-在实例化Turndown类时可以配置默认的转换规则(例如，标题使用atx风格，列表使用-风格，代码块使用```风格)，通过options参数来配置
+在实例化 `Turndown` 类时可以配置默认的转换规则(例如，标题使用 atx 风格，列表使用 - 风格，代码块使用 \`\`\` 风格)，通过 `options` 参数来配置
 ```js
 var turndownService = new TurndownService({
   headingStyle: 'atx',
@@ -64,12 +63,12 @@ var turndownService = new TurndownService({
 
 ## 扩展方法
 
-通过一些实例方法，可以定制化的处理HTML文本，生成指定的Markdown效果格式
+通过一些实例方法，可以定制化的处理 HTML 文本，生成指定的 Markdown 效果格式
 
 ### `addRule(key, rule)` 添加规则
 - key：唯一的规则名称,string类型
 - rule：规则对象，包含`filter`和`replacement`两个属性
-  - filter：过滤函数，返回true则执行replacement，false则跳过，用来过滤出需要特殊处理的节点
+  - filter：过滤函数，返回 `true` 则执行 `replacement`，`false` 则跳过，用来过滤出需要特殊处理的节点
     - node 遍历处理的节点
   - replacement：替换函数，返回替换后的字符串，将过滤出来的节点进行转换
     - content：过滤出来节点的内容
@@ -102,8 +101,8 @@ turndownService.removeRule('h2-h1')
 这里可以使用一个插件对象，也可以使用多个插件对象数组
 :::
 
-- plugin：插件对象，包含`rules`和`options`两个属性
-  - rules：规则对象，包含`filter`和`replacement`两个属性
+- plugin：插件对象，包含 `rules` 和 `options` 两个属性
+  - rules：规则对象，包含 `filter`  和 `replacement`  两个属性
   - options：配置对象
 
   可以使用一些配置好的插件，也可以自定义插件

@@ -83,8 +83,8 @@ export default defineConfig({
                 collapsed: true
               },
               { text: "http-server", link: "/js/lib/http-server/" },
-              { text: "html转markdown", link: "/js/lib/turndown/" },
-              { text: "2d 物理引擎", link: "/js/lib/matter/" },
+              { text: "html 转 markdown", link: "/js/lib/turndown/" },
+              { text: "matter.js", link: "/js/lib/matter/" },
               { text: "robotjs", link: "/js/lib/robotjs/" },
               { text: "Monaco Editor", link: "/js/lib/monaco/" },
               { text: "highlight.js", link: "/js/lib/hljs/" },
