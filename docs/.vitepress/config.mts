@@ -156,6 +156,7 @@ export default defineConfig({
           { text: "unix 命令", link: "/terminal/unix/" },
           { text: "vim 编辑器", link: "/terminal/vim/" },
           { text: "shell 脚本", link: "/terminal/shell/" },
+          { text: "ssh", link: "/terminal/ssh/" },
         ],
         collapsed: false
       },
