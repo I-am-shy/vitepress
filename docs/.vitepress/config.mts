@@ -96,6 +96,7 @@ export default defineConfig({
               { text: "cfonts", link: "/js/lib/cfonts/" },
               { text: "hono", link: "/js/lib/hono/" },
               { text: "pm2", link: "/js/lib/pm2/" },
+              { text: "pixi.js", link: "/js/lib/pixi/" },
             ],
             collapsed: false
           },
