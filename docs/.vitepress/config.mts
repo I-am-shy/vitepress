@@ -9,7 +9,8 @@ export default defineConfig({
   description: "一个文档网站",
   lastUpdated: true,
   head: [
-    ['link', { rel: 'icon', href: '/vitepress/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/vitepress/favicon.ico' }],
+    ['meta', { name: 'google-site-verification',content:'kMIcjoFrm3rf47N9ilb78OdmBGFBLBSGgBN7UIss5Dk'}] // Google Search Console https://search.google.com/search-console/
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
