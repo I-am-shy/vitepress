@@ -9,35 +9,36 @@ Linux（类 unix） 和 macOS（unix） 能兼容大部分 unix 命令。
 这些命令允许您创建目录和处理文件已经管理系统用户和权限。
 
 
-| 命令   | 描述                         |
-|--------|------------------------------|
-| cat    | 显示文件内容                |
-| cd     | 更改目录到目录名             |
-| chmod  | 更改权限                     |
-| cp     | 复制源文件到目的地           |
-| file   | 确定文件类型                 |
-| find   | 查找文件                     |
-| ll     | 显示文件的详细信息(包括文件权限),相当于ls -l           |
-| ls     | 显示有关文件类型的信息       |
-| mkdir  | 创建一个新的目录目录名       |
-| open   | 打开文件 或文件夹                     |
-| mv     | 移动（重命名）使用oldName为newname |
-| pwd    | 打印当前工作目录             |
-| rm     | 删除（删除）文件名           |
-| rmdir  | 删除现有的目录，只要它是空的 |
-| touch  | 更新文件的访问和修改时间(相当于打开了一下文件，如果文件不存在，则创建一个文件)    |
-| vi,vim | 文本编辑器  打开一个文件进行编辑          |
-| gzip   | 压缩文件         |
-| who    | 显示当前登录用户信息         |
-| whoami | 显示当前用户名         |
-| uname  | 显示系统信息         |
-| uptime | 显示系统运行时间         |
-| df     | 显示磁盘空间使用情况         |
-| du     | 显示文件夹大小         |
-| free   | 显示内存使用情况         |
-| ps     | 显示进程信息         |
-| top    | 显示系统中所有进程的详细信息         |
-| kill   | 终止进程         |
+| 命令   | 描述 | 用法示例 |
+|--------|------|----------|
+| cat | 显示文件内容 | `cat file.txt` / `cat -n file.txt` |
+| cd | 更改目录到目录名 | `cd ~/Desktop` / `cd ..` |
+| chmod | 更改权限 | `chmod 755 script.sh` / `chmod +x script.sh` |
+| cp | 复制源文件到目的地 | `cp a.txt b.txt` / `cp -r folder/ backup/` |
+| file | 确定文件类型 | `file image.png` |
+| find | 查找文件 | `find . -name "*.md"` / `find /tmp -type f` |
+| ll | 显示文件详细信息（相当于 `ls -l`） | `ll` / `ll -h` |
+| ls | 显示文件和目录信息 | `ls` / `ls -la` |
+| mkdir | 创建新目录 | `mkdir docs` / `mkdir -p a/b/c` |
+| open | 打开文件或文件夹 | `open .` / `open file.txt` |
+| mv | 移动或重命名文件 | `mv a.txt ~/Desktop/` / `mv old.txt new.txt` |
+| pwd | 打印当前工作目录 | `pwd` |
+| rm | 删除文件或目录 | `rm file.txt` / `rm -rf dir` |
+| rmdir | 删除空目录 | `rmdir empty_dir` |
+| touch | 更新文件时间或创建文件 | `touch new.txt` |
+| vi,vim | 文本编辑器 | `vi file.txt` / `vim file.txt` |
+| gzip | 压缩文件 | `gzip file.txt` / `gzip -d file.txt.gz` |
+| who | 显示当前登录用户信息 | `who` |
+| whoami | 显示当前用户名 | `whoami` |
+| uname | 显示系统信息 | `uname -a` |
+| uptime | 显示系统运行时间 | `uptime` |
+| df | 显示磁盘空间使用情况 | `df -h` |
+| du | 显示文件夹大小 | `du -sh .` / `du -h directory/` |
+| free | 显示内存使用情况 | `free -h` |
+| ps | 显示进程信息 | `ps aux` |
+| top | 显示系统中所有进程的详细信息 | `top` |
+| kill | 终止进程 | `kill 1234` / `kill -9 1234` |
+| date | 打印系统时间 | `date` / `date +'%F %T'` |
 
 
 ## 常用的文件操作流程
@@ -51,13 +52,13 @@ Linux（类 unix） 和 macOS（unix） 能兼容大部分 unix 命令。
 ### 新建文件
 1. 查看当前目录下的文件和目录 `ls`
 2. 切换到一个目录 `cd <file/dir>` 
-3. 新建一个文件 `touch 文件名` 或 `cat > 文件名` 或 `echo "内容" >>/> 文件名` 或 `vim/vi 文件名`
+3. 新建一个文件 `touch 文件名` 或 `cat > 文件名` 或 `echo "内容" >> 文件名` 或 `vim/vi 文件名`
 
 ### 编辑文件
 
 1. 切换到一个目录 `cd <file/dir>` 
 2. 查看当前目录下的文件和目录 `ls`
-3. 编辑一个文件 `vi 文件名`
+3. 编辑一个文件 `vim 文件名`
 
 ### 打开文件
 
@@ -212,6 +213,7 @@ year           1-9999
 - `,`：代表列出枚举值（如周 1,3,5 代表周一、周三、周五）
 - `-`：代表范围（如时 9-17 代表上午 9 点到下午 5 点）
 - `/`：代表步长/间隔（如分 */10 代表每隔 10 分钟）
+
 **常见写法示例**
 - `0 * * * *`：每小时的第 0 分钟执行一次
 - `*/5 * * * *`：每隔 5 分钟执行一次
