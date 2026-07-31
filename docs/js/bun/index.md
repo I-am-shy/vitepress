@@ -110,3 +110,48 @@ Routes:
   / ./index.html
 Press h + Enter to show shortcuts
 ```
+
+### 打包可执行文件
+
+[Bun v1.1.5](https://bun.com/blog/bun-v1.1.5) 版本起，支持将应用交叉编译打包成可执行的文件。
+
+> [!TIP] 交叉编译
+> 交叉编译指在一个系统中编译出另一个系统的可执行文件，例如在 Linux 中编译 windows（.exe） 或macOS 的可执行文件。
+
+
+Bun 通过以下命令将一个 JS、TS 应用打包成单文件可执行文件（[Single-file executable](https://bun.com/docs/bundler/executables)）：
+
+```bash
+bun build <./xxx.ts> --compile --target=<支持的系统和架构> --outfile <打包后的文件路径> 
+```
+::: details `--target`支持的参数
+| target | 操作系统 | 架构 | 现代 | 基准 | Libc |
+| --- | --- | --- | --- | --- | --- |
+| bun-linux-x64 | Linux | x64 | ✅ | ✅ | glibc |
+| bun-linux-arm64 | Linux | arm64 | ✅ | N/A | glibc |
+| bun-windows-x64 | Windows | x64 | ✅ | ✅ | - |
+| bun-windows-arm64 | Windows | arm64 | ✅ | N/A | - |
+| bun-darwin-x64 | macOS | x64 | ✅ | ✅ | - |
+| bun-darwin-arm64 | macOS | arm64 | ✅ | N/A | - |
+| bun-linux-x64-musl | Linux | x64 | ✅ | ✅ | musl |
+| bun-linux-arm64-musl | Linux | arm64 | ✅ | N/A |
+:::
+
+
+将 app.ts 打包成一个可直接运行的执行文件：
+
+app.ts:
+```ts
+console.log("Hello world!");
+```
+
+```bash
+bun build ./app.ts --compile --outfile myApp
+
+# 运行可执行文件
+./myApp
+Hello world!
+```
+
+bun 打包是会通过入口文件（这里是 app.ts）将所有依赖导入（支持 ESM 和 CJS）的文件和包都捆绑到可执行文件中，即将 bun 的源码和被打包的 ts 代码放到一起。所有内置的 Bun 和 Node.js API 都能在运行时支持。
+

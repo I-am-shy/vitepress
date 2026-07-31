@@ -119,6 +119,7 @@ export default defineConfig({
         items: [
           { text: "npm", link: "/npm/" },
           { text: "npm 发布包", link: "/npm/publish" },
+          { text: "可执行的 2 进制 npm 包", link: "/npm/binary-package" },
         ],
         collapsed: false
       },
