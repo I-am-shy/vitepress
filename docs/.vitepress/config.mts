@@ -170,6 +170,7 @@ export default defineConfig({
           { text: "docker 安装", link: "/docker/" },
           { text: "docker 基本命令", link: "/docker/command" },
           { text: "docker 打包网页", link: "/docker/build" },
+          { text: "docker 本地部署电子邮件系统", link: "/docker/email" },
         ],
         collapsed: false
       },
