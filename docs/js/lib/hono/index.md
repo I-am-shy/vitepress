@@ -47,7 +47,7 @@ const app = new Hono()
 
 app.get('/', (c) => c.json({ message: 'Hello World' }));
 // 启动服务
-serve(app,{port:3000},(info)=>{
+serve({fetch: app.fetch, port: 3000}, (info)=>{
   console.log(`Server is running on port ${info.port}`);
 })
 ```
