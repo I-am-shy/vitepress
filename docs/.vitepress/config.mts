@@ -197,6 +197,7 @@ export default defineConfig({
           { text: "github pages", link: "/other/github-pages/" },
           { text: "github actions", link: "/other/github-actions/" },
           { text: "正则表达式", link: "/other/regular/" },
+          { text: "指针", link: "/other/pointer/" },
           { text: "更多", link: "/other/more/" }
         ],
         collapsed: false
