@@ -118,3 +118,43 @@ ssh root@127.0.0.1
 输入 `passwd` 设置密码，如果有旧密码则需要输入旧密码进行验证
 
 :::
+
+## 使用命令行唤起系统通知
+
+1. Windows 系统 (Windows 10/11)
+
+Windows 右下角的横幅通知 (Toast Notification)，使用 PowerShell 脚本实现：
+
+```powershell
+powershellpowershell -Command 
+"
+Guid=New-Guid; 
+[void][Windows.UI.Notifications.ToastNotificationManager, Windows.UI.Notifications, ContentType = WindowsRuntime];
+$Template = [Windows.UI.Notifications.ToastNotificationManager]::GetTemplateContent([Windows.UI.Notifications.ToastTemplateType]::ToastText02); 
+$Texts = $Template.GetElementsByTagName('text'); 
+$Texts.Item(0).AppendChild($Template.CreateTextNode('通知标题')) > $null; 
+$Texts.Item(1).AppendChild($Template.CreateTextNode('这里是你的非交互提示信息。')) > $null; 
+$Toast = [Windows.UI.Notifications.ToastNotification]::new($Template);
+[Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier('cmd.exe').Show($Toast);
+"
+```
+
+> **效果**：从屏幕右下角滑出，几秒后自动消失并收入通知中心。
+
+2. macOS 系统
+
+macOS 提供了原生的系统通知横幅 (Notification)，它会从屏幕右上角滑出，不阻断操作，随后自动隐藏。
+
+```bash
+osascript -e 'display notification "这里是你的非交互提示信息。" with title "通知标题"'
+```
+
+> **效果**：完全非交互，用户无法点击阻断，直接进入 macOS 通知中心。
+
+3. Linux 系统
+Linux 系统中 (Ubuntu / Debian / Fedora 等)，`notify-send` 本身就是最标准的非交互式桌面通知工具。
+
+```bash
+# 参数 -t 3000：指定通知显示的时间为 3000 毫秒（3 秒），到期自动消失。
+notify-send "通知标题" "这里是你的非交互提示信息。" -t 3000
+```
