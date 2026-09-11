@@ -182,6 +182,7 @@ export default defineConfig({
           { text: "MCP 工具", link: "/ai/mcp-server" },
           { text: "Claude Code", link: "/ai/claude-code" },
           { text: "AI Agent", link: "/ai/ai-agent" },
+          { text: "Harness", link: "/ai/harness" }
         ],
         collapsed: false
       },
