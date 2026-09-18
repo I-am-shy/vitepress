@@ -64,10 +64,10 @@ npm install -g bun
 ```
 直接替换 node 命令即可运行 ts 文件。
 
-|命令｜node ｜tsx ｜bun ｜
-|---｜---｜---｜---｜
-|运行 ts 文件｜~~node xxx.js~~｜tsx xxx.ts｜bun xxx.ts｜
-|观察者模式运行 ts 文件｜~~node --watch xxx.ts~~｜tsx watch xxx.ts｜bun --watch xxx.ts｜
+|命令 | node  | tsx  | bun  | 
+|--- | --- | --- | --- | 
+|运行 ts 文件 | ~~node xxx.js~~ | tsx xxx.ts | bun xxx.ts | 
+|观察者模式运行 ts 文件 | ~~node --watch xxx.ts~~ | tsx watch xxx.ts | bun --watch xxx.ts | 
 
 ## 示例
 使用 ts-node 运行 ts 。
