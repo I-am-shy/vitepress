@@ -11,7 +11,8 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/vitepress/favicon.ico' }],
     ['meta', { name: 'google-site-verification',content:'kMIcjoFrm3rf47N9ilb78OdmBGFBLBSGgBN7UIss5Dk'}], // Google Search Console https://search.google.com/search-console/
-    ['meta', { name: 'og:image', content: 'https://image.shyshi.top/pages.png' }], // Open Graph image for social media sharing
+    ['meta', { property: 'og:image', content: 'https://image.shyshi.top/pages.png' }], // Open Graph image for social media sharing
+    ['meta', { name: 'twitter:image', content: 'https://image.shyshi.top/pages.png' }], // Twitter image for social media sharing
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
