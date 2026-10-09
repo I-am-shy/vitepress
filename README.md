@@ -1,7 +1,7 @@
 # shy的学习笔记
 
 
-![image](https://github.com/user-attachments/assets/6a2032c2-24d5-4c76-941d-07e355965fb3)
+![image](https://image.shyshi.top/pages.png)
 
 
 ---
